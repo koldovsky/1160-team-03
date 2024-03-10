@@ -1,0 +1,126 @@
+.hero {
+  min-width: 320px;
+  font-family: Roboto, sans-serif;
+  background-image: url(../img/hero-background.png);
+  background-position: 51.56% 58.49%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__container {
+  padding: 110px 24px 100px 24px;
+}
+
+@media (min-width: 768px) {
+  .hero__container {
+    padding: 172.5px 32px 147.5px 32px;
+  }
+}
+
+@media (min-width: 991px) {
+  .hero__container {
+    padding: 235px 40px 235px 40px;
+  }
+}
+
+.hero__caption {
+  color: var(--hero-caption-color);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 19.2px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .hero__caption {
+    margin-bottom: 30px;
+  }
+}
+
+.hero__title {
+  color: var(--hero-title-color);
+  font-family: Poppins, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52.8px;
+  margin-bottom: 35px;
+} 
+
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 63px;
+    line-height: 69.3px;
+  } 
+}
+
+@media (min-width: 991px) {
+  .hero__title {
+    font-size: 68px;
+    line-height: 74.8px;
+  } 
+}
+
+.hero__title-color {
+  color: var(--hero-title-span-color);
+}
+
+@media (min-width: 768px) {
+  .hero__title-color {
+    display: block;
+  }
+}
+
+@media (min-width: 951px) {
+  .hero__title-color {
+    display: inline;
+  }
+}
+
+@media (min-width: 991px) {
+  .hero__title-color {
+    display: block;
+  }
+}
+
+@media (min-width: 1035px) {
+  .hero__title-color {
+    display: inline;
+  }
+}
+
+.hero__title-block {
+  display: block;
+}
+
+.hero__text {
+  color: var(--hero-text-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .hero__text {
+    display: block;
+    width: 337px;
+  }
+}
+
+@media (min-width: 941px) {
+  .hero__text {
+    width: 425px;
+  }
+}
+
+.hero__link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 18px 26px;
+  background-color: var(--hero-link-bg-color);
+  border-radius: 2px;
+  color:  var(--hero-link-color);
+  font-size: 16.5px;
+  font-weight: 700;
+  line-height: 16.5px;
+} 
