@@ -1,7 +1,23 @@
-.primary-dark-button {
-    padding: 10px 20px;
+.primary-accent-button {
+    padding: 15px 25px;
     text-align: center;
-    background-color: var(--sub-title-color);
+    background-color: var(--primary-color);
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    color: var(--light-text-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.primary-accent-button:hover {
+    background-color: var(--secondary-color);
+}
+
+
+.primary-dark-button {
+    padding: 15px 25px;
+    text-align: center;
+    background-color: var(--secondary-color);
     font-size: 15px;
     font-family: "Roboto", sans-serif;
     color: var(--light-text-color);
@@ -10,5 +26,53 @@
 }
 
 .primary-dark-button:hover {
-    background-color: var(--brand-color);
+    background-color: var(--primary-color);
+}
+
+.primary-light-button {
+    padding: 15px 25px;
+    text-align: center;
+    background-color: var(--light-text-color);
+    font-size: 16.5px;
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.primary-light-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+}
+
+.secondary-dark-button {
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.secondary-dark-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+}
+
+.secondary-light-button {
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    color: var(--light-text-color);
+    border: 2px solid var(--light-text-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.secondary-light-button:hover {
+    background-color: var(--light-text-color);
+    color: var(--secondary-color);
 }

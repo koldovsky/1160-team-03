@@ -8,9 +8,9 @@
 }
 
 :root {
-    --brand-color: #c00407;
-    --sub-title-color: #222222;
-    --description-color: #656565;
+    --primary-color: #c00407;
+    --secondary-color: #222222;
+    --description-text-color: #656565;
     --text-color: #8c8c8c;
     --light-text-color: #ffffff;
     scroll-behavior: smooth;
@@ -29,6 +29,6 @@ img {
 h2 {
     font-size: 12px;
     font-family: "Roboto", sans-serif;
-    color: var(--brand-color);
+    color: var(--primary-color);
     text-transform: uppercase;
 }
