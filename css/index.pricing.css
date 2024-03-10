@@ -4,6 +4,7 @@
 
 .pricing__top-title {
     text-align: center;
+    line-height: 19.2px;
 }
 
 .pricing__sub-title {
@@ -12,8 +13,17 @@
     color: var(--secondary-color);
     font-weight: 700;
     text-align: center;
-    line-height: 41px;
+    line-height: 40.8px;
     margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    
+    .pricing__sub-title {
+        font-size: 37px;
+        line-height: 44.4px;
+    }
+
 }
 
 .pricing__description {
@@ -125,13 +135,21 @@
         margin-top: 5px;
     }
 
+    .pricing__plan-heading .machine-type {
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+}
+
+.pricing__plan-per-period {
+    line-height: 25.2px;
 }
 
 .pricing__plan-per-period .dash {
     font-size: 14px;
     font-family: "Roboto", sans-serif;
     color: var(--primary-color);
-    line-height: 25px;
     font-weight: 700;
 }
 
@@ -140,7 +158,6 @@
     font-family: "Roboto", sans-serif;
     color: var(--secondary-color);
     font-style: italic;
-    line-height: 25px;
     font-weight: 400;
 }
 
@@ -162,7 +179,7 @@
     font-size: 16px;
     font-family: "Roboto", sans-serif;
     color: var(--text-color);
-    line-height: 25px;
+    line-height: 25.6px;
     margin-left: 10px;
 }
 
