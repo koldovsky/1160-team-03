@@ -1,0 +1,14 @@
+.primary-dark-button {
+    padding: 10px 20px;
+    text-align: center;
+    background-color: var(--sub-title-color);
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    color: var(--light-text-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.primary-dark-button:hover {
+    background-color: var(--brand-color);
+}
