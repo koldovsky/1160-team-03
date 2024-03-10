@@ -1,0 +1,120 @@
+.header {
+  font-family: Roboto, sans-serif;
+}
+
+.header__top {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    min-height: 42px;
+    background-color: var(--header-top-bg-color);
+  }
+
+  .header__top-address {
+    display: flex;
+    gap: 20px;
+  }  
+
+  .header__top-address-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .header__top-address-text {
+    color: var(--header-top-address-text-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19.6px;
+    font-style: normal;
+  }
+
+  .header__top-number {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header__top-number a svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--header-top-numver-svg-color);
+  }
+
+  .header__top-number-text {
+    text-decoration: none;
+    color: var(--header-top-number-text-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19.6px;
+    font-style: normal;
+  }
+}
+
+.header__bottom {
+  padding: 30px 24px;
+}
+
+@media (min-width: 768px) {
+  .header__bottom {
+    padding: 30px 32px;
+  }
+}
+
+.header__logo-link .header__logo {
+  width: 230px;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__links {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .header__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+  }
+
+  .header__logo-link .header__logo {
+    width: 160px;
+  }
+
+  .header__nav {
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .header__nav-link {
+    margin: 10px 17.5px;
+    color: var(--header-nav-link-color);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .header__links {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .header__links-link {
+    margin: 0 5px 10px 5px;
+  }
+}
+

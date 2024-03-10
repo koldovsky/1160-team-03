@@ -9,7 +9,7 @@
 .pricing__sub-title {
     font-size: 34px;
     font-family: "Poppins", sans-serif;
-    color: var(--sub-title-color);
+    color: var(--secondary-color);
     font-weight: 700;
     text-align: center;
     line-height: 41px;
@@ -19,7 +19,7 @@
 .pricing__description {
     font-size: 18px;
     font-family: "Roboto", sans-serif;
-    color: var(--description-color);
+    color: var(--description-text-color);
     text-align: center;
     line-height: 27px;
     margin-top: 15px;
@@ -33,8 +33,8 @@
 
 .pricing__plan-column {
     padding: 35px 33px;
-    border-radius: 5px;
-    border: 1px solid #222222;
+    border-radius: 10px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 @media (min-width: 768px) {
@@ -99,14 +99,14 @@
 .pricing__plan-heading,
 .pricing__plan-per-period,
 .pricing__plan-benefits-list,
-.pricing__plan-benefits-list-item {
+.pricing__benefits-list-item {
     margin-top: 20px;
 }
 
 .pricing__plan-heading .price {
     font-size: 40px;
     font-family: "Poppins", sans-serif;
-    color: var(--brand-color);
+    color: var(--primary-color);
     line-height: 40px;
     font-weight: 700;
 }
@@ -114,7 +114,7 @@
 .pricing__plan-heading .machine-type {
     font-size: 18px;
     font-family: "Poppins", sans-serif;
-    color: var(--sub-title-color);
+    color: var(--secondary-color);
     line-height: 18px;
     font-weight: 600;
 }
@@ -130,7 +130,7 @@
 .pricing__plan-per-period .dash {
     font-size: 14px;
     font-family: "Roboto", sans-serif;
-    color: var(--brand-color);
+    color: var(--primary-color);
     line-height: 25px;
     font-weight: 700;
 }
@@ -138,7 +138,7 @@
 .pricing__plan-per-period .text {
     font-size: 14px;
     font-family: "Roboto", sans-serif;
-    color: var(--sub-title-color);
+    color: var(--secondary-color);
     font-style: italic;
     line-height: 25px;
     font-weight: 400;
@@ -149,7 +149,16 @@
     list-style-position: inside;
 }
 
-.pricing__plan-benefits-list-item {
+.pricing__benefits-list-item {
+    display: flex;
+}
+
+.pricing__benefits-item-image {
+    width: 20px;
+    height: 24px;
+}
+
+.pricing__benefits-item-text {
     font-size: 16px;
     font-family: "Roboto", sans-serif;
     color: var(--text-color);
