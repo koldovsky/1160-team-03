@@ -96,7 +96,10 @@
 
 }
 
-.pricing__plan-heading {
+.pricing__plan-heading,
+.pricing__plan-per-period,
+.pricing__plan-benefits-list,
+.pricing__plan-benefits-list-item {
     margin-top: 20px;
 }
 
@@ -114,10 +117,6 @@
     color: var(--sub-title-color);
     line-height: 18px;
     font-weight: 600;
-}
-
-.pricing__plan-per-period {
-    margin-top: 20px;
 }
 
 @media (min-width: 768px) {
@@ -146,7 +145,6 @@
 }
 
 .pricing__plan-benefits-list {
-    margin-top: 20px;
     list-style-image: url(../img/pricing/list-tick-icon.svg);
     list-style-position: inside;
 }
@@ -159,20 +157,6 @@
     margin-left: 10px;
 }
 
-/* .pricing__plan-column .primary-dark-button {
-    margin-top: 20px;
-    width: 92px;
-    height: 47px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #222222;
-} */
-
-/* .pricing__plan-column .primary-dark-button a {
-    font-size: 15px;
-    font-family: "Roboto", sans-serif;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 700;
-} */
+.pricing__plan-button {
+    margin-top: 40px;
+}

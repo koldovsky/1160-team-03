@@ -29,6 +29,6 @@ img {
 h2 {
     font-size: 12px;
     font-family: "Roboto", sans-serif;
-    color: var(--top-title-color);
+    color: var(--brand-color);
     text-transform: uppercase;
 }
