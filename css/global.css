@@ -8,6 +8,17 @@
 }
 
 :root {
+    --header-top-bg-color: #f9f9f9;
+    --header-top-address-text-color: rgb(34, 34, 34);
+    --header-top-numver-svg-color: rgb(192, 4, 7);
+    --header-top-number-text-color: rgb(34, 34, 34);
+    --header-nav-link-color: rgb(101, 101, 101);
+    --hero-caption-color: rgb(223, 223, 223);
+    --hero-title-color: rgb(255, 255, 255);
+    --hero-title-span-color: rgb(192, 4, 7);
+    --hero-text-color: rgb(223, 223, 223);
+    --hero-link-color: rgb(255, 255, 255);
+    --hero-link-bg-color: rgb(192, 4, 7);
     --brand-color: #c00407;
     --sub-title-color: #222222;
     --description-color: #656565;
