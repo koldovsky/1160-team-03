@@ -34,3 +34,7 @@
     line-height: 27px;
     text-align: left;
 }
+
+.faq__accordion{
+    display: grid;
+}
