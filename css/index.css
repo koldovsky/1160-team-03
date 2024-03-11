@@ -2,7 +2,9 @@
 @import "controls.css";
 @import "index.header.css";
 @import "index.hero.css";
+@import "index.services-cards.css";
 @import "index.pricing.css";
 @import "index.testimonials.css";
+@import "index.step-for-rent.css";
+@import "index.special-offer-rent.css";
 @import "index.footer.css";
-@import "index.step-for-rent.css"
