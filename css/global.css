@@ -25,7 +25,9 @@
     --text-color: #8c8c8c;
     --light-text-color: #ffffff;
     --arrow-icon-background: #252525;
-    --testimonials-date-color: #6a6b6c;;
+    --testimonials-date-color: #6a6b6c;
+    --services__tab-item-color: rgb(51, 51, 51);
+    --services__tab-item-hover-color: rgb(122, 122, 122);
     scroll-behavior: smooth;
 }
 
