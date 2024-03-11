@@ -37,7 +37,9 @@
     height: 32px;
     border-radius: 50%;
 }
-
+.coffee__carousel-slide{
+    padding: 15px;
+}
 @media (min-width: 768px){
     .coffee__carousel-slides{
         grid-template-columns: repeat(2, 1fr);
@@ -80,4 +82,6 @@
 
 .coffee__carousel-button{
     margin-top: 24px;
+    border-radius: 2px;
+    border: none;
 }
