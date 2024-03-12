@@ -1,0 +1,16 @@
+.banner {
+    background-image: url(../img/banner-background.png);
+    min-width: 320px;
+    
+}
+
+.banner__title-text {
+    font-size: 40px;
+    font-family: "Poppins", sans-serif;
+    color: black;
+    text-transform: none; 
+}
+
+.banner__title-word-highlight {
+    color: red;
+}

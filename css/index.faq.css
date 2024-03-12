@@ -16,6 +16,7 @@
 }
 .faq__super-title{
     text-align: left;
+    
 }
 
 .faq__title{
@@ -33,4 +34,8 @@
     font-weight: 400;
     line-height: 27px;
     text-align: left;
+}
+
+.faq__accordion{
+    display: grid;
 }
