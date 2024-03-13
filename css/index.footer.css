@@ -1,0 +1,109 @@
+.footer__partial {
+    background-color: var(--services__tab-item-color);
+}
+
+.footer__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+}
+
+.footer__logo_img {
+    display: block;
+    block-size: border-box;
+    width: 238px;
+}
+
+.footer__navigation-tittle {
+    color: var(--light-text-color);
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    box-sizing: border-box;
+    text-transform: none;
+    height: auto;
+    block-size: border-box;
+}
+
+.footer__information-block {
+    color: var(--services__tab-item-hover-color);
+}
+
+.footer__navigation {
+    block-size: border-box;
+    color: var(--services__tab-item-hover-color);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+a {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: var(--services__tab-item-hover-color);
+    text-decoration: none;
+}
+.footer__information-block {
+    max-width: 370px;
+}
+
+.footer__navigation-konteiner {
+    margin: 20px;
+    list-style: none;
+}
+
+.footer__shop{
+    block-size: border-box;
+    color: var(--services__tab-item-hover-color);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer__shop-tittle {
+    color: var(--light-text-color);
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    box-sizing: border-box;
+    text-transform: none;
+    height: auto;
+    block-size: border-box;
+}
+
+.footer__navigation-icon-facebook {
+    width: 32px;
+    display: inline-flex;
+}
+
+.footer__navigation-icon-instagram{
+    width: 32px;
+    display: inline-flex;
+}
+
+.footer__navigation-icon-youtube {
+    width: 32px;
+    display: inline-flex;
+}
+
+.footer__logo,
+.footer__navigation,
+.footer__shop {
+    display: inline-flex;
+    flex-basis: 33%;
+    margin-right: 20px;
+}
+
+.footer__konteiner {
+    display: flex;
+}
+.footer__navigation-konteiner li,
+.footer__navigation-konteiner li a {
+    margin-bottom: 10px;
+    text-align: left;
+}
