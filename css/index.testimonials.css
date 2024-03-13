@@ -27,76 +27,10 @@
 
 .testimonials__carousel {
     margin-top: 45px;
-    display: grid;
-    gap: 10px;
 }
 
 .testimonials__carousel-item {
     padding: 10px 35px;
-}
-
-@media (min-width: 768px) {
-
-    .testimonials__carousel {
-        grid-template-columns: 1fr 1fr;
-    }
-
-}
-
-@media (min-width: 992px) {
-
-    .testimonials__carousel {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-}
-
-
-.testimonials__arrow-image {
-    width: 24px;
-    height: 24px;
-    background-color: var(--arrow-icon-background);
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.testimonials__arrow-image img {
-    width: 12px;
-    height: 12px;
-    filter: invert(15%) sepia(100%) saturate(3790%) hue-rotate(349deg) brightness(73%) contrast(112%);
-}
-
-.testimonials__arrow-image .left-arrow {
-    transform: scaleX(-1);
-}
-
-@media (min-width: 768px) {
-
-    .testimonials__arrow-image {
-        width: 32px;
-        height: 32px;
-    }
-    
-    .testimonials__arrow-image img {
-        width: 20px;
-        height: 20px;
-    }
-
-}
-
-@media (min-width: 1200px) {
-
-    .testimonials__arrow-image {
-        background-color: transparent;
-    }
-    
-    .testimonials__arrow-image img {
-        width: 30px;
-        height: 30px;
-    }
-
 }
 
 .testimonials_carousel-item-image {
@@ -147,4 +81,51 @@
     font-family: "Roboto", sans-serif;
     color: var(--testimonials-date-color);
     font-weight: 700;
+}
+
+.testimonials__arrow-button {
+    margin: auto 0;
+    opacity: unset;
+    width: 24px;
+    height: 24px;
+    border-radius: 30px;
+    background-color: var(--arrow-icon-background);
+}
+
+.testimonials__arrow-icon {
+    width: 12px;
+    height: 12px;
+    background-image: url(../img/testimonials/arrow-icon.svg);
+    filter: invert(15%) sepia(100%) saturate(3790%) hue-rotate(349deg) brightness(73%) contrast(112%);
+}
+
+.testimonials__arrow-button .carousel-control-prev-icon {
+    transform: scaleX(-1);
+}
+
+@media (min-width: 768px) {
+
+    .testimonials__arrow-button {
+        width: 32px;
+        height: 32px;
+    }
+
+    .testimonials__arrow-button .testimonials__arrow-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .testimonials__arrow-button {
+        background-color: transparent;
+    }
+
+    .testimonials__arrow-button .testimonials__arrow-icon {
+        width: 30px;
+        height: 30px;
+    }
+
 }
