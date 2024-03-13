@@ -1,6 +1,117 @@
 .special {
-    width: 500px;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
+    background-image: url('https://res2.weblium.site/res/6059b710530fd500214ccb5a/6061e6a54e804e00229a6907?nowebp');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.special__inner {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left:auto;
+    max-width: var(--container-size);
+    display: flex;
+    flex-direction: column;
+}
+.special__block {
+    display:flex;
+    flex-direction: column;
+}
+.special__super-title {
+    color:rgb(255, 255, 255);
+    align-content: center;
+    font-size: 12px;
+    font-family: var(--font-family-secondary);
+}
+.special__title {
+    color: rgb(255, 255, 255);
+    font-family: var(--font-family-primary);
+    font-size: 48px;
+    margin-top: 30px;
+    line-height: 1.1;
+}
+@media (min-width: 768px) {
+    .special__inner {
+       flex-direction: row;
+    }
+    .special__title {
+        font-size: 68px;
+    }
+}
+.special__offer {
+    color:rgb(255, 255, 255);
+    font-family: var(--font-family-secondary);
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+.special_buttons {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 340px) {
+    .special_buttons {
+        flex-direction: row;
+    }
+}
+.special__rent-now.button{
+    display: inline-block;
+    text-decoration: none;
+    width:auto;
+    padding: 18px 26px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 2px;
+    color: black;
+    font-size: 16.5px;
+    font-family: var(--font-family-secondary);
+    font-weight: 700;
+    line-height: 16.5px;
+}
+.special__characteristics.button{
+        display: inline-block;
+        text-decoration: none;
+        width: auto;
+        margin: 10px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 25px;
+        padding-right: 25px;
+        border: 3px solid;
+        border-radius: 2px;
+        background-color: rgba(255, 255, 255, 0);
+        border-color:rgb(255, 255, 255) ;
+        color: white;
+        font-family: var(--font-family-secondary);
+        font-size: 16.5px;
+        font-weight: 700;
+        line-height: 16.5px;
+}
+@media (min-width: 340px) {
+    .special__characteristics.button {
+        margin-left: 0px;
+    }
+}
+.special__rent-now.button:hover {
+    color: white;
+    background-color: black;
+}
+.special__characteristics.button:hover {
+    color:black;
+    background-color: white;
+}
+.special__image-part {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 50px;
+}
+@media (min-width: 768px) {
+    .special__image-part {
+        margin-top: 0px;
+    }
 }

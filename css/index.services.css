@@ -36,11 +36,15 @@
     color: var(--secondary-color);
 }
 
-.services__tab-right-content{
+.services__tab-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.services__tab-right-content {
     padding: 60px;
-} 
+}
 
 .services__tab-item-title {
     font-size: 18px;
@@ -63,10 +67,9 @@
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    text-align: left;
 }
 
-li.services__tab-item-list-element{
+li.services__tab-item-list-element {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -79,67 +82,37 @@ li.services__tab-item-list-element{
     height: 24px;
 }
 
-.services__tab-item-list{
-    display: block;
-    
-}
-
-services__tab-item-list-element {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-}
-
-
-@media (min-width: 768px) {
+@media (max-width: 767px) {
     .services__tab-content {
         display: flex;
-        flex-direction: row;
-        gap: 20px;
-        
-    }
-    .services__maint-image {
-        width: 352px;
-        border-radius: 5px;
-    }
-
-   .services__tab-right-content{
-        width: 50%;
-        padding: 46px;
-    }
-} 
-
-@media  (min-width: 992px) {
-        .services__maint-image {
-        float: left;
-        border-radius: 5px;
-        width: 456px;
-    }
-
-    .services__tab-right-content{
-        width: 50%;
-        position: relative;
-        display: flex;
         flex-direction: column;
-        border-radius: 8px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: var(--services__border-color);
+        gap: 20px;
+    }
+
+    .services__tab-right-content {
+        padding: 39px;
+    }
+
+    .services__maint-image {
+        width: 272px;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
     }
 }
 
-@media (min-width: 1200px) {
-   */ .services__tab-content{
-        display: flex;
-        flex-direction: row;
+@media (min-width: 767px) {
+    .services__maint-image {
+        border-radius: 5px;
+        width: 560px;
+        object-fit: cover;
+    }
+
+    .services__tab-right-content {
         border-radius: 8px;
         border-width: 1px;
         border-style: solid;
         border-color: var(--services__border-color);
-    }*/
-    .services__maint-image{
-        float: left;
-        border-radius: 5px;
-        width: 560px;
     }
 }

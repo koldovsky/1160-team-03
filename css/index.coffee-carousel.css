@@ -1,90 +1,86 @@
-.coffee{
-    padding: 55px 24px 90px;
+.coffee {
+  padding: 55px 24px 90px;
 }
-
 
 .coffee__main-title,
 .coffee__title,
-.coffee__text{
-    text-align: center;
+.coffee__text {
+  text-align: center;
 }
 
-.coffee__title{
-    font-size: 34px;
-    font-family: "Poppins", sans-serif;
-    color: var(--secondary-color);
-    font-weight: 700;
-    line-height: 41px;
-    margin-top: 20px;
+.coffee__title {
+  font-size: 34px;
+  font-family: "Poppins", sans-serif;
+  color: var(--secondary-color);
+  font-weight: 700;
+  line-height: 41px;
+  margin-top: 20px;
 }
 
-.coffee__text{
-    font-size: 18px;
-    font-family: "Roboto", sans-serif;
-    color: var(--description-text-color);
-    font-weight: 400;
-    line-height: 27px;
-    margin-top: 15px;
+.coffee__text {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: var(--description-text-color);
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: 15px;
 }
 
-.coffee__carousel-slides{
-    margin-top: 45px;
-    display: grid;
+.coffee__carousel-slides {
+  margin-top: 45px;
+  display: grid;
+  gap: 30px;
+}
+
+.coffee__carousel__button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.coffee__carousel-slide {
+  padding: 15px;
+}
+
+@media (min-width: 768px) {
+  .coffee__carousel-slides {
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+  }
 }
 
-.coffee__carousel__button{
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
+@media (min-width: 1024px) {
+  .coffee__carousel-slides {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
 }
 
-.coffee__carousel-slide{
-    padding: 15px;
+.coffee__carousel-link-title {
+  margin-top: 8px;
+  text-decoration: none;
 }
 
-@media (min-width: 768px){
-    .coffee__carousel-slides{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-   
-
+.coffee__carousel-title {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: var(--secondary-color);
+  font-weight: 500;
+  line-height: 25px;
+  text-align: left;
 }
 
-@media (min-width: 1024px){
-    .coffee__carousel-slides{
-        grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
-    }
-
+.coffee__carouser-text-price {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-color);
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
 }
 
-.coffee__carousel-link-title{
-    margin-top: 8px;
-    text-decoration: none;
-}
-
-.coffee__carousel-title{
-    font-size: 18px;
-    font-family: "Roboto", sans-serif;
-    color: var(--secondary-color);
-    font-weight: 500;
-    line-height: 25px;
-    text-align: left;
-}
-
-.coffee__carouser-text-price{
-    font-size: 18px;
-    font-family: "Roboto", sans-serif;
-    color: var(--primary-color);
-    font-weight: 500;
-    line-height: 26px;
-    text-align: left;
-}
-
-.coffee__carousel-button{
-    margin-top: 24px;
-    border-radius: 2px;
-    border: none;
+.coffee__carousel-button {
+  margin-top: 24px;
+  border-radius: 2px;
+  border: none;
 }
