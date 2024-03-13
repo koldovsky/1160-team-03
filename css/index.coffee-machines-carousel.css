@@ -1,0 +1,64 @@
+.coffee-machines {
+    text-align: center;
+    margin: 15px;
+}
+.coffee-machines h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+.coffee-machines__first-titel{
+    font-family: 'Poppins', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+}
+.coffee-machines__second-titel{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    
+    font-weight: 300;
+}
+.coffee-machines__img{
+    width: 248px;
+}
+.coffee-machines__container{
+    width: 250px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    display: inline-block;
+}
+.coffee-machines__container a{
+    text-decoration: none;
+}
+.coffee-machines__container h6 {
+    color: black;
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.coffee-machines__container p {
+    color: #c00407;
+    font-weight: 500;
+}
+.coffee-machines__button {
+    background-color: #c00407; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.coffee-machines__button:hover {  
+    background-color: #000000;
+}    
+@media (min-width: 768px){
+    .coffee-machines__first-titel{
+        font-size: 40px;
+    }
+
+}
