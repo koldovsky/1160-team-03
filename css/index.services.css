@@ -104,7 +104,7 @@ li.services__tab-item-list-element {
 @media (min-width: 767px) {
     .services__maint-image {
         border-radius: 5px;
-        width: 456px;
+        width: 560px;
     }
 
     .services__tab-right-content {
