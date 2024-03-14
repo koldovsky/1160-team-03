@@ -86,10 +86,6 @@
 
 .new-arrival__button {
   color: red;
-}
-
-.new-arrival__button-rent-now-link {
-  color: var(--hero-title-color);
-  display: flex;
   font-size: 15px;
 }
+
