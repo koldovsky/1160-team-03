@@ -49,10 +49,15 @@ p.accordion-header {
     font-weight: 500;
 }
 
+.accordion-button {
+    font-weight: 500;
+}
+
 @media (max-width: 767px) {
     .faq__left-container img {
         width: 272px;
         margin: auto;
+        object-fit: cover;
     }
 
     .faq {
