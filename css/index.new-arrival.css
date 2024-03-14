@@ -84,8 +84,19 @@
   color: var(--text-color);
 }
 
-.new-arrival__button {
-  color: red;
-  font-size: 15px;
+.new-arrival__button-rent-now-link {
+    display: inline-block;
+    text-decoration: none;
+    width:auto;
+    padding: 18px 26px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 2px;
+    color:red;
+    font-size: 16.5px;
+    font-family: var(--font-family-secondary);
+    font-weight: 700;
+    line-height: 15px;
 }
 
