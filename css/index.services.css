@@ -82,6 +82,8 @@ li.services__tab-item-list-element {
     height: 24px;
 }
 
+
+
 @media (max-width: 767px) {
     .services__tab-content {
         display: flex;
