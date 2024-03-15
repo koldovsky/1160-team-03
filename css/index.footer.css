@@ -1,5 +1,6 @@
 .footer__partial {
     background-color: var(--services__tab-item-color);
+    align-items: center;
 }
 
 .footer__logo {
