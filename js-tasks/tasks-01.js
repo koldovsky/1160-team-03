@@ -15,7 +15,11 @@ function move(position, roll) {
 
 // 4. Personalized Message https://www.codewars.com/kata/grasshopper-personalized-message/train/javascript
 function greet(name, owner) {
-  return name === owner ? "Hello boss" : "Hello guest";
+  if (name === owner) {
+    return 'Hello boss';
+  } else {
+    return 'Hello guest';
+  }
 }
 
 // 5. Keep Hydrated https://www.codewars.com/kata/keep-hydrated-1/train/javascript
