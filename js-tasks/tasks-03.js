@@ -1,14 +1,10 @@
 // 1. https://www.codewars.com/kata/find-the-smallest-integer-in-the-array/train/javascript
 class SmallestIntegerFinder {
-  findSmallestInt(args) {
-    return Math.min(...args);
-  }
+  findSmallestInt = (args) => Math.min(...args);
 }
 
 // 2. https://www.codewars.com/kata/geometry-basics-circle-circumference-in-2d/train/javascript
-function circleCircumference(circle) {
-  return Number(2 * Math.PI * circle.radius);
-}
+circleCircumference = (circle) => 2 * Math.PI * circle.radius;
 
 // 3. https://www.codewars.com/kata/training-js-number-12-loop-statement-for-dot-in-and-for-dot-of/train/javascript
 function giveMeFive(obj) {
