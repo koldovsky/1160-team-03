@@ -1,51 +1,38 @@
 const slideContainer = document.querySelector('.testimonials__carousel');
-const slides = document.querySelectorAll('.testimonials__carousel-item');
-const prevButton = document.querySelector('.btn-prev');
+const slides = document.getElementsByClassName('testimonials__carousel-item');
 const nextButton = document.querySelector('.btn-next');
+const prevButton = document.querySelector('.btn-prev');
 
 function hideSlides(slides) {
   for (const slide of slides) {
-    slide.classList.add("hidden");
+    slide.classList.add('hidden');
   }
 }
 
-// hideSlides(slides);
-
-let currentSlideIndex = 0;
-
-function renderSlide() {
+function renderSlides() {
     hideSlides(slides);
-    slides[currentSlideIndex].classList.remove("hidden");
-    // slides[currentSlideIndex].style.display = 'block';
-    // slideContainer.innerHTML = slides[currentSlideIndex];
-    if (window.matchMedia('(min-width:768px)').matches) {
-        const secondSlideIndex = currentSlideIndex + 1 >= slides.length ? 0 : currentSlideIndex + 1;
-        slides[secondSlideIndex].classList.remove("hidden");
-        // slides[secondSlideIndex].style.display = 'block';
-        // slideContainer.innerHTML += slides[secondSlideIndex];
-        if (window.matchMedia('(min-width:991px)').matches) {
-            const thirdSlideIndex = secondSlideIndex + 1 >= slides.length ? 0 : secondSlideIndex + 1;
-            slides[thirdSlideIndex].classList.remove("hidden");
-            // slides[thirdSlideIndex].style.display = 'block';
-            // slideContainer.innerHTML += slides[thirdSlideIndex];
-        }
+    slides[0].classList.remove('hidden');
+    if (window.matchMedia('(min-width: 768px)').matches) {
+        slides[1].classList.remove('hidden');
+    }
+    if (window.matchMedia('(min-width: 991px)').matches) {
+      slides[2].classList.remove('hidden');
     }
 }
 
 function nextSlide() {
-    currentSlideIndex = currentSlideIndex + 1 >= slides.length ? 0 : currentSlideIndex + 1;
-    renderSlide();
+    slideContainer.appendChild(slides[0]);
+    renderSlides();
 }
 
 function prevSlide() {
-    currentSlideIndex = currentSlideIndex - 1 < 0 ? slides.length - 1 : currentSlideIndex - 1;
-    renderSlide();
+    slideContainer.insertBefore(slides[slides.length - 1], slides[0]);
+    renderSlides();
 }
 
-// setInterval(nextSlide, 3000);
-renderSlide();
+renderSlides();
 
-prevButton.addEventListener('click', prevSlide);
 nextButton.addEventListener('click', nextSlide);
+prevButton.addEventListener('click', prevSlide);
 
-window.addEventListener('resize', renderSlide);
+window.addEventListener('resize', renderSlides);
