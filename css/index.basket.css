@@ -1,0 +1,30 @@
+.basket__button {
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    border: none;
+    background-color: transparent;
+    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 250px;
+    width: 50px;
+}
+  .modal-dialog {
+    margin: 15%; 
+    max-width: 70%;
+    max-height: 80%; 
+    margin-top: 20px; 
+  }
+@media (min-width: 767px){
+    .basket__button {
+        top:100px;
+        right: 20px;
+        width: 70px;
+    }
+    .modal-dialog {
+        margin: 25%; 
+        max-width: 50%;
+        max-height: 80%; 
+        margin-top: 20px; 
+      }
+    
+}

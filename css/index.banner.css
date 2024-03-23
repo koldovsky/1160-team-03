@@ -1,0 +1,53 @@
+.banner {
+    padding: 90px 0 60px; 
+  }  
+
+.banner__container {
+    min-width: 272px;
+    min-height: 582.34px;
+    background-image: url(../img/banner-background.png);
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    padding: 43px 39px;
+    margin: auto;
+}
+
+.banner__title-text {
+    font-size: 34px;
+    font-family: "Poppins", sans-serif;
+    color: black;
+    text-transform: none; 
+}
+
+.banner__description-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+.banner__title-word-highlight {
+    color: red;
+}
+
+.banner__buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .banner {
+        padding: 105px 0 60px;
+      }  
+}
+
+@media (min-width: 992px) {
+    .banner {
+        padding: 120px 0 60px;
+      }  
+}
+
+@media (min-width: 388px) {
+    .banner__buttons {
+        flex-direction: row;
+    } 
+}

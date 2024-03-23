@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="index.html">
+</head>
+<body>
+<button type="button" class="basket__button btn-primary fixed-cart-button" data-toggle="modal" data-target="#cartModal">
+    <img src="./img/shopping-bag.png" alt="Корзина">
+</button>
+<div class="modal__basket modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">Ваша корзина</h5>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+        <button type="button" class="btn btn-primary">Оформити замовлення</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  $('#cartModal').on('show.bs.modal', function () {
+    $('body').addClass('modal-open-noscroll');
+  });
+
+  $('#cartModal').on('hidden.bs.modal', function () {
+    $('body').removeClass('modal-open-noscroll');
+  });
+</script>
+</body>
+</html>

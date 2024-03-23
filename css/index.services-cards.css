@@ -1,0 +1,103 @@
+.services-cards {
+    max-width: var(--container-size);
+    display: flex;
+    justify-content: center;
+    padding: 60px 15px;
+    margin:auto;
+    flex-wrap: wrap;
+}
+
+.services-cards__card-item-image {
+    color: var(--hero-link-bg-color);
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-cards__card-items {
+    position: relative;
+    padding: 31px 27px;
+    display: flex;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 5px 10px 7px rgba(136,140,133,.05);
+    max-width: 100%;
+    flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+    .services-cards__card-item-image {
+        width: 50px;
+        height: 50px;
+    }
+    .services-cards__card-items {
+        max-width: 50%;
+        flex-basis: 50%;
+    }
+}
+@media (min-width: 1024px) {
+    .services-cards__card-items {
+        max-width: 33%;
+        flex-basis: 33%;
+    }
+}
+@media (max-width: 767px) {
+    .services-cards__card-items:not(:first-child) {
+        margin-top: 50px;
+    }
+    .services-cards__affordability-title,
+    .services-cards__delivery-title,
+    .services-cards__waranty-title
+    {
+        font-size: 18px;
+        line-height: 1.9;
+    }
+}
+
+.services-cards__card-items .services-cards__card-item
+{
+    margin: calc(30px/4);
+}
+
+.services-cards__card-items .services-cards__card-item{
+    display: flex;
+    justify-content: center;
+}
+
+.services-cards__card-items .services-cards__card-item:not(:first-child){
+    flex-direction: column;
+    min-width: 40%;
+    flex: 1;
+}
+
+.services-cards__affordability-title,
+.services-cards__delivery-title,
+.services-cards__waranty-title
+{
+    font-family: var(--font-family-primary);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.services-cards__waranty-text,
+.services-cards__delivery-text,
+.services-cards__affordability-text
+{
+    word-wrap: break-word;
+    font-family: var(--font-family-secondary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.services-cards__card-item{
+    padding: 12px;
+    width: 50px;
+    height: 50px;
+}

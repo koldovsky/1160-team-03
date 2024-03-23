@@ -1,0 +1,140 @@
+.coffee {
+  padding: 55px 24px 90px;
+}
+
+.coffee_description {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.coffee__main-title,
+.coffee__title,
+.coffee__text {
+  text-align: center;
+}
+
+.coffee__title {
+  font-size: 34px;
+  font-family: "Poppins", sans-serif;
+  color: var(--secondary-color);
+  font-weight: 700;
+  line-height: 41px;
+  margin-top: 20px;
+}
+
+.coffee__text {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: var(--description-text-color);
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: 15px;
+}
+
+.coffee__carousel-slides {
+  margin-top: 45px;
+  display: grid;
+  gap: 30px;
+}
+
+.coffee__carousel__button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--arrow-icon-background);
+}
+.coffee__carousel__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/button-arrow.svg);
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: invert(17%) sepia(75%) saturate(4531%) hue-rotate(351deg)
+    brightness(72%) contrast(112%);
+}
+
+.coffee__carousel__button--left {
+  transform: scaleX(-1);
+}
+.coffee__carousel__button--right {
+  transform: scaleX(1);
+}
+
+@media (min-width: 768px) {
+  .coffee {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .coffee__carousel-slides {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .coffee_description {
+    width: 459px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .coffee {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .coffee_description {
+    width: 619px;
+  }
+  .coffee__carousel-slides {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1202px) {
+  .coffee__carousel__button {
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+  }
+  .coffee__carousel__button::after {
+    background-size: 30px;
+  }
+}
+
+.coffee__carousel-link-title {
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.coffee__carousel-title {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: var(--secondary-color);
+  font-weight: 500;
+  line-height: 25px;
+  text-align: left;
+}
+
+.coffee__carouser-text-price {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-color);
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+}
+
+.coffee__carousel-button {
+  margin-top: 24px;
+  border-radius: 2px;
+  border: none;
+}
