@@ -1,4 +1,5 @@
 function init() {
+    import('./brands-carousel.js')
     import('./testimonials-carousel.js');
 }
 

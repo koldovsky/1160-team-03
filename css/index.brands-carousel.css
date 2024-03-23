@@ -1,0 +1,32 @@
+.brands-carousel.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    position: relative;
+}
+
+.brands-carousel__slides {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.brands-carousel__btn-prev,
+.brands-carousel__btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.brands-carousel__btn-prev {
+    left: 10px;
+}
+
+.brands-carousel__btn-next {
+    right: 10px;
+}
