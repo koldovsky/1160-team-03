@@ -1,11 +1,11 @@
 const slides = [
-    `<div><img src="img/coffee-carousel-lavazza.png" alt="Lavazza"></div>`,
-    `<div><img src="img/coffee-brands-folgers.webp" alt="Folgers"></div>`,
-    `<div><img src="img/coffee-brands-frontier.webp" alt="Frontier"></div>`,
-    `<div><img src="img/coffee-brands-melitta.webp" alt="Melitta"></div>`,
-    `<div><img src="img/coffee-brands-green_mountain.webp" alt="Green Mountain"></div>`,
-    `<div><img src="img/coffee-brands-monarch.webp" alt="Monarch"></div>`,
-    `<div><img src="img/coffee-brands-costa.webp" alt="Costa"></div>`,
+    `<div><img src="img/brands-carousel-lavazza.png" alt="Lavazza"></div>`,
+    `<div><img src="img/brands-carousel-folgers.png" alt="Folgers"></div>`,
+    `<div><img src="img/brands-carousel-frontier.png" alt="Frontier"></div>`,
+    `<div><img src="img/brands-carousel-melitta.png" alt="Melitta"></div>`,
+    `<div><img src="img/brands-carousel-green_mountain.png" alt="Green Mountain"></div>`,
+    `<div><img src="img/brands-carousel-monarch.png" alt="Monarch"></div>`,
+    `<div><img src="img/brands-carousel-costa.png" alt="Costa"></div>`,
 ];
 
 let currentSlideIdx = 0;
