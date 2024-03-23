@@ -1,5 +1,6 @@
 function init() {
     import('./brands-carousel.js')
+    import('./testimonials-render-articles.js');
     import('./testimonials-carousel.js');
 }
 
