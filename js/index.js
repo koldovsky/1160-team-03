@@ -3,6 +3,7 @@ function init() {
     import('./testimonials-render-articles.js');
     import('./testimonials-carousel.js');
     import('./coffee-carousel-items.js');
+    import('./coffee-carousel.js');
 }
 
 const totalPartials = document.querySelectorAll('[hx-trigger="load"], [data-hx-trigger="load"]').length;
