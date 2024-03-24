@@ -105,8 +105,10 @@
 }
 
 .testimonials__carousel-button {
+    width: 24px;
+    height: 24px;
     margin: auto 0;
-    opacity: 90%;
+    opacity: 85%;
     transition: opacity .3s ease-out;
     border-radius: 30px;
     background-color: var(--arrow-icon-background);
