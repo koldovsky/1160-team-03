@@ -30,6 +30,8 @@
     --services__tab-item-color: rgb(51, 51, 51);
     --services__tab-item-hover-color: rgb(122, 122, 122);
     --services__border-color: #f2f2f2;
+    --footer-background: #212121;
+    --footer-line-background: #191919;
     --container-size: 1200px;
     --font-family-primary: "Poppins", sans-serif;
     --font-family-secondary: "Roboto", sans-serif;
