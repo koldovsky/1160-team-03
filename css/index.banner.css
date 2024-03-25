@@ -3,14 +3,13 @@
 }
 
 .banner__container {
-  min-width: 272px;
   max-width: 1170px;
   min-height: 356.19px;
   max-height: 582.34px;
   background-image: url(../img/banner-background.png);
   background-size: cover;
   background-position: 50% 75%;
-  padding: 65px 55px;
+  padding: 55px 45px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -19,49 +18,50 @@
     display: inline-block;
     text-decoration: none;
     width: auto;
-    margin: 10px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 25px;
-    padding-right: 25px;
+    margin-top: 45px;
+    margin-right: 10px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 22px;
+    padding-right: 22px;
     border: 3px solid;
     border-radius: 2px;
     background-color: var(--primary-color);
     border-color: var(--primary-color);
-    color: black;
+    color: var(--banner-button-text-color);
     font-family: var(--font-family-secondary);
-    font-size: 16.5px;
+    font-size: 15px;
     font-weight: 700;
-    line-height: 16.5px;
+    line-height: 15px;
   }
 
 .banner__button-learn-more-link {
   display: inline-block;
   text-decoration: none;
   width: auto;
-  margin: 10px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 25px;
-  padding-right: 25px;
+  margin-top: 45px;
+  margin-left: 10px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 22px;
+  padding-right: 22px;
   border: 3px solid;
   border-radius: 2px;
-  background-color: rgba(255, 255, 255, 0);
-  border-color: rgb(255, 255, 255);
-  color: white;
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
   font-family: var(--font-family-secondary);
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 700;
-  line-height: 16.5px;
+  line-height: 15px;
 }
 
 .banner__title-text {
-  font-size: 40px;
+  font-size: 34px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   color: var(--secondary-color);
   text-transform: none;
-  margin-bottom: 34px;
+  margin-bottom: 0;
 }
 
 .banner__description-text {
@@ -82,9 +82,12 @@
   flex-direction: column;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) {F
   .banner {
     padding: 105px 40px 60px 40px;
+  }
+  .banner__title-text {
+    margin-bottom: 34px;
   }
 }
 
