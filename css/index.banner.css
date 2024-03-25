@@ -1,54 +1,107 @@
 .banner {
-    padding: 90px 0 60px; 
-  }  
+  padding: 90px 40px 60px 40px;
+}
 
 .banner__container {
-    min-width: 272px;
-    min-height: 582.34px;
-    background-image: url(../img/banner-background.png);
-    background-size: cover;
-    background-position: center;
-    width: 80%;
-    padding: 43px 39px;
-    margin: auto;
+  min-width: 272px;
+  max-width: 1170px;
+  min-height: 356.19px;
+  max-height: 582.34px;
+  background-image: url(../img/banner-background.png);
+  background-size: cover;
+  background-position: 50% 75%;
+  padding: 65px 55px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner__button-rent-now-link {
+    display: inline-block;
+    text-decoration: none;
+    width: auto;
+    margin: 10px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 3px solid;
+    border-radius: 2px;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: black;
+    font-family: var(--font-family-secondary);
+    font-size: 16.5px;
+    font-weight: 700;
+    line-height: 16.5px;
+  }
+
+.banner__button-learn-more-link {
+  display: inline-block;
+  text-decoration: none;
+  width: auto;
+  margin: 10px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 3px solid;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgb(255, 255, 255);
+  color: white;
+  font-family: var(--font-family-secondary);
+  font-size: 16.5px;
+  font-weight: 700;
+  line-height: 16.5px;
 }
 
 .banner__title-text {
-    font-size: 40px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    color: black;
-    text-transform: none; 
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: var(--secondary-color);
+  text-transform: none;
+  margin-bottom: 34px;
 }
 
 .banner__description-text {
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 25.6px;
+  margin: 0;
+  padding: 0;
+  color: var(--banner-description-color);
 }
 
 .banner__title-word-highlight {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .banner__buttons {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
-    .banner {
-        padding: 105px 0 60px;
-      }  
+  .banner {
+    padding: 105px 40px 60px 40px;
+  }
 }
 
 @media (min-width: 992px) {
-    .banner {
-        padding: 120px 0 60px;
-      }  
+  .banner {
+    padding: 120px 40px 60px 40px;
+  }
 }
 
 @media (min-width: 388px) {
-    .banner__buttons {
-        flex-direction: row;
-    } 
+  .banner__buttons {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1350px) {
+  .banner {
+    padding: 120px 0 60px 0;
+  }
 }
