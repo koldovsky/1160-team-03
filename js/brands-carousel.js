@@ -19,9 +19,13 @@ function renderSlide() {
         if (window.matchMedia('(min-width:767px)').matches) {
             const thirdSlideIdx = secondSlideIdx + 1 >= slides.length ? 0 : secondSlideIdx + 1;
             slideContainer.innerHTML += slides[thirdSlideIdx];
-            if (window.matchMedia('(min-width:980px)').matches) {
+            if (window.matchMedia('(min-width:991px)').matches) {
                 const forthSlideIdx = thirdSlideIdx + 1 >= slides.length ? 0 : thirdSlideIdx + 1;
                 slideContainer.innerHTML += slides[forthSlideIdx];
+                const fiveSlideIdx = forthSlideIdx + 1 >= slides.length ? 0 : forthSlideIdx + 1;
+                slideContainer.innerHTML += slides[fiveSlideIdx];
+                const sixSlideIdx = fiveSlideIdx + 1 >= slides.length ? 0 : fiveSlideIdx + 1;
+                slideContainer.innerHTML += slides[sixSlideIdx];
             }
         }
     }
@@ -36,6 +40,9 @@ function prevSlide() {
     currentSlideIdx = currentSlideIdx - 1 < 0 ? slides.length - 1 : currentSlideIdx - 1;
     renderSlide();
 }
+
+setInterval(nextSlide, 3000);
+renderSlide();
 
 const btnNext = document.querySelector('.brands-carousel__btn-next');
 btnNext.addEventListener('click', nextSlide);
