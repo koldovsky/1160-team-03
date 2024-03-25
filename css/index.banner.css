@@ -1,5 +1,5 @@
 .banner {
-  padding: 90px 40px 60px 40px;
+  padding: 90px 20px 60px 20px;
 }
 
 .banner__container {
@@ -10,6 +10,7 @@
   background-size: cover;
   background-position: 50% 75%;
   padding: 55px 45px;
+  padding-right: 25px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -18,8 +19,9 @@
     display: inline-block;
     text-decoration: none;
     width: auto;
-    margin-top: 45px;
-    margin-right: 10px;
+    margin-top: 28px;
+    margin-bottom: 10px;
+    margin-right: 0px;
     padding-top: 13px;
     padding-bottom: 13px;
     padding-left: 22px;
@@ -33,14 +35,15 @@
     font-size: 15px;
     font-weight: 700;
     line-height: 15px;
+    max-width: 114.98px;
   }
 
 .banner__button-learn-more-link {
   display: inline-block;
   text-decoration: none;
   width: auto;
-  margin-top: 45px;
-  margin-left: 10px;
+  margin-top: 10px;
+  margin-left: 0px;
   padding-top: 13px;
   padding-bottom: 13px;
   padding-left: 22px;
@@ -53,6 +56,7 @@
   font-size: 15px;
   font-weight: 700;
   line-height: 15px;
+  max-width: 126.95px;
 }
 
 .banner__title-text {
@@ -84,7 +88,7 @@
 
 @media (min-width: 768px) {F
   .banner {
-    padding: 105px 40px 60px 40px;
+    padding: 105px 20px 60px 20px;
   }
   .banner__title-text {
     margin-bottom: 34px;
@@ -93,13 +97,25 @@
 
 @media (min-width: 992px) {
   .banner {
-    padding: 120px 40px 60px 40px;
+    padding: 120px 20px 60px 20px;
   }
 }
 
 @media (min-width: 388px) {
   .banner__buttons {
     flex-direction: row;
+  }
+  .banner__button-learn-more-link {
+    margin-top: 45px;
+    margin-left: 10px;
+    padding-bottom: 0px;
+  }
+  .banner__button-rent-now-link {
+    margin-top: 45px;
+    margin-right: 10px;
+  }
+  .banner__container {
+    padding: 55px 45px;
   }
 }
 
