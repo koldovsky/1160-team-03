@@ -161,11 +161,6 @@
     font-weight: 400;
 }
 
-.pricing__plan-benefits-list {
-    list-style-image: url(../img/pricing/tick-icon.svg);
-    list-style-position: inside;
-}
-
 .pricing__benefits-list-item {
     display: flex;
 }
