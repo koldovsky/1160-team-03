@@ -1,0 +1,78 @@
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contacts__info,
+.contacts__request-a-quote {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    max-width: 50%;
+    text-align: center;
+    min-width: 768px) and (max-width: 991px)
+}
+
+.contacts__info-heading {
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.contacts__info-text,
+.contacts__info-address-text,
+.contacts__info-hours-text{
+    color: var(--text-color);
+}
+.contacts__info-contacts a {
+    color: var(--text-color);
+    text-decoration: none; /* Прибираємо стандартне підкреслення */
+}
+
+
+.contacts__info {
+    text-align: left;
+    padding: 20px;
+    align-items: start;
+}
+
+.contacts__request-a-quote {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: auto;
+    padding: 20px;
+    width: 570px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.contacts__request-a-quote-form {
+    padding: 16px 25px;
+    width: 100%;
+}
+
+.contacts__request-a-quote-full-name,
+.contacts__request-a-quote-phone-number,
+.contacts__request-a-quote-email,
+.contacts__request-a-quote-message {
+    width: calc(100% - 50px);
+    height: 50px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.contacts__request-a-quote-message {
+    height: 150px;
+}
+
+.contacts__request-a-quote-button {
+    width: 100%;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

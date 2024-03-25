@@ -3,7 +3,9 @@
   margin: auto;
 }
 .footer__context {
+  align-items: center;
   text-align: center;
+  max-width: auto;
 }
 
 .footer__logo {
@@ -30,6 +32,11 @@
   height: auto;
   margin-block-start: 0;
   margin-block-end: 0;
+  text-align: left;
+}
+
+.footer__navigation-tittle {
+  color: var(--light-text-color) !important;
 }
 
 .footer__subscribe_form {
@@ -56,7 +63,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  text-align: left;
+}
+.footer__navigation,
+.footer__shop, {
+  width: 162px;
 }
 
 .footer__list-text {
@@ -88,6 +99,11 @@
 
 .footer__subscribe_batton {
   background-color: var(--primary-color);
+  color: var(--light-text-color);
+  text-transform: none !important;
+  justify-content: center;
+  width: 270px;
+  height: 50px;
 }
 
 .footer__logo,
