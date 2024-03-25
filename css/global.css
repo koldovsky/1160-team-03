@@ -41,7 +41,7 @@
     --container-size: 1200px;
     --font-family-primary: "Poppins", sans-serif;
     --font-family-secondary: "Roboto", sans-serif;
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -60,6 +60,7 @@ h2 {
     color: var(--primary-color);
     text-transform: uppercase;
 }
+
 h3 {
     font-family: "Poppins", sans-serif;
 }
