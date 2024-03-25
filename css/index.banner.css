@@ -14,8 +14,9 @@
 }
 
 .banner__title-text {
-    font-size: 34px;
+    font-size: 40px;
     font-family: "Poppins", sans-serif;
+    font-weight: 700;
     color: black;
     text-transform: none; 
 }
@@ -26,7 +27,7 @@
 }
 
 .banner__title-word-highlight {
-    color: red;
+    color: var(--primary-color);
 }
 
 .banner__buttons {

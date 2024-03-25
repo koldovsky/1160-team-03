@@ -10,6 +10,7 @@
 :root {
     --primary-color: #c00407;
     --secondary-color: #222222;
+    --banner-description-color: rgb(140, 140, 140);
     --header-burger-btn-color: rgb(34, 34, 34);
     --header-bottom-bg-color: #fff;
     --header-top-bg-color: #f9f9f9;
