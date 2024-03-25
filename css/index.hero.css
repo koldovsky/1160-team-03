@@ -23,6 +23,17 @@
   }
 }
 
+.hero__clock {
+  display: inline-block;
+  font-size: 30px;
+  color: var(--hero-title-color);
+  transition: color 0.4s ease-in-out;
+}
+
+.hero__clock:hover {
+  color: var(--hero-title-span-color);
+}
+
 .hero__caption {
   color: var(--hero-caption-color);
   font-size: 12px;
@@ -119,8 +130,13 @@
   padding: 18px 26px;
   background-color: var(--hero-link-bg-color);
   border-radius: 2px;
-  color: var(--hero-link-color);
+  color:  var(--hero-link-color);
   font-size: 16.5px;
   font-weight: 700;
   line-height: 16.5px;
+  transition: background-color .4s ease-in-out;
 } 
+
+.hero__link:hover {
+  background-color: var(--header-burger-btn-color);
+}

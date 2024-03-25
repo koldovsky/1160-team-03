@@ -1,0 +1,54 @@
+.brands-carousel.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    position: relative;
+    height: 130px;
+}
+
+.brands-carousel.container::before,
+.brands-carousel.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: calc((100vw - 100%) / 2);
+    background-color: var(--secondary-color); 
+}
+
+.brands-carousel.container::before {
+    left: 100%; 
+}
+
+.brands-carousel.container::after {
+    right: 100%; 
+}
+
+.brands-carousel__slides {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.brands-carousel__btn-prev,
+.brands-carousel__btn-next {
+    background-color: var(--secondary-color);
+    justify-content: center;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+.brands-carousel__btn-prev svg,
+.brands-carousel__btn-next svg {
+    fill: var(--light-text-color);
+}
+
+.brands-carousel__btn-prev {
+    left: 10px;
+    transform: scaleX(-1);
+}
+
+.brands-carousel__btn-next {
+    right: 10px;
+}

@@ -162,7 +162,7 @@
 }
 
 .pricing__plan-benefits-list {
-    list-style-image: url(../img/pricing/list-tick-icon.svg);
+    list-style-image: url(../img/pricing/tick-icon.svg);
     list-style-position: inside;
 }
 
