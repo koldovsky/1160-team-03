@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services</title>
+  <title>Coffee Space</title>
 </head>
 <!--Kateryna Khar-->
+
 <body>
   <section class="services container">
     <h2 class="services__super-title">Services</h2>
@@ -16,44 +18,62 @@
       supplies.
     </p>
     <div class="services__tab container">
-      <div class="services__tab-item">Rental Service</div>
-      <article class="services__tab-content container">
+      <ul class="services__tab-item">
+        <li class="services__tab-item-element tablinks" onclick="openTab(event, 'rental')" id="defaultOpen">
+          Rental&nbspService
+        </li>
+        <li class="services__tab-item-element tablinks" onclick="openTab(event, 'consulting')">
+          Consulting
+        </li>
+        <li class="services__tab-item-element tablinks" onclick="openTab(event, 'accessories')">
+          Accessories
+        </li>
+        <li class="services__tab-item-element tablinks" onclick="openTab(event, 'repair')">
+          Repair
+        </li>
+      </ul>
+      <article class="services__tab-content container" id="rental">
         <img class="services__maint-image" src="img/rental-machine.png" alt="rental machine" />
         <div class="services__tab-right-content">
           <p class="services__tab-item-title">Coffee Machine Rental.</p>
           <p class="services__tab-item-text">
-            Do you want to always drink your favorite coffee, but don't want to
-            waste time brewing it? Our company is ready to help you. Here you
-            can rent manual and automatic coffee machines that will prepare your
-            favorite drink as quickly and tasty as possible.
+            Do you want to always drink your favorite coffee, but don't want
+            to waste time brewing it? Our company is ready to help you. Here
+            you can rent manual and automatic coffee machines that will
+            prepare your favorite drink as quickly and tasty as possible.
           </p>
-          <br>
+          <br />
           <p class="services__tab-item-text">
             In our company, you will find coffee machines for both home and
             office use, as well for coffee shops.
           </p>
-          <br>
+          <br />
           <ul class="services__tab-item-list">
             <li class="services__tab-item-list-element">
-              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark">
-              <p>Only modern manual and automatic coffee machines from trusted
-                brands.</p>
+              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark" />
+              <p>
+                Only modern manual and automatic coffee machines from trusted
+                brands.
+              </p>
             </li>
             <li class="services__tab-item-list-element">
-              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark">
-              <p>Any coffee machines, from inexpensive for home use to professional
-                equipment for a coffee shop.</p>
+              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark" />
+              <p>
+                Any coffee machines, from inexpensive for home use to
+                professional equipment for a coffee shop.
+              </p>
             </li>
             <li class="services__tab-item-list-element">
-              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark">
-              <p>Simple conditions for renting a coffee machine – for any period
-                with a minimum deposit.</p>
+              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark" />
+              <p>
+                Simple conditions for renting a coffee machine – for any
+                period with a minimum deposit.
+              </p>
             </li>
           </ul>
         </div>
       </article>
-      <div class="services__tab-item">Consulting</div>
-      <article class="services__tab-content container">
+      <article class="services__tab-content container" id="consulting">
         <img class="services__maint-image" src="img/consulting.png" alt="consulting" />
         <div class="services__tab-right-content">
           <p class="services__tab-item-title">
@@ -63,106 +83,123 @@
             We offer consulting services for clients who wish to rent a coffee
             machine or order coffee beans for professional use.
           </p>
-          <br>
+          <br />
           <p class="services__tab-item-text">
             You can get advice from our specialists in any convenient way. Our
             experts will provide answers to all your questions and help you
             solve any problems related to choosing equipment or starting a
             coffee shop, like:
           </p>
-          <br>
+          <br />
           <ul class="services__tab-item-list">
             <li class="services__tab-item-list-element">
-              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark">
-              <p>What is the best coffee machine for professional use in a small
-                coffee shop or a large restaurant?</p>
+              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark" />
+              <p>
+                What is the best coffee machine for professional use in a
+                small coffee shop or a large restaurant?
+              </p>
             </li>
             <li class="services__tab-item-list-element">
-              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark">
-              <p>Which coffee brands are suitable for use in professional equipment
-                and how to calculate the required coffee supply?</p>
+              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark" />
+              <p>
+                Which coffee brands are suitable for use in professional
+                equipment and how to calculate the required coffee supply?
+              </p>
             </li>
             <li class="services__tab-item-list-element">
-              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark">
-              <p>How often is it necessary to diagnose professional equipment?</p>
+              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark" />
+              <p>
+                How often is it necessary to diagnose professional equipment?
+              </p>
             </li>
           </ul>
         </div>
       </article>
-      <div class="services__tab-item">Accessories</div>
-      <article class="services__tab-content container">
-        <img class="services__maint-image" src="img/accessories.png" alt="accessories">
+      <article class="services__tab-content container" id="accessories">
+        <img class="services__maint-image" src="img/accessories.png" alt="accessories" />
         <div class="services__tab-right-content">
-          <p class="services__tab-item-title">
-            Coffee Machine Accessories.
-          </p>
+          <p class="services__tab-item-title">Coffee Machine Accessories.</p>
           <p class="services__tab-item-text">
-            WA reliable coffee machine is important, but accessories will also come in handy for home, office, or
-            commercial use.
+            WA reliable coffee machine is important, but accessories will also
+            come in handy for home, office, or commercial use.
           </p>
-          <br>
+          <br />
           <p class="services__tab-item-text">
-            We offer our customers everything they need for comfortable brewing. We sell disposable cups, caps, spoons,
-            spare parts
-            for coffee machines, filters, and many other accessories that you may need for the comfortable use of the
-            equipment.
+            We offer our customers everything they need for comfortable
+            brewing. We sell disposable cups, caps, spoons, spare parts for
+            coffee machines, filters, and many other accessories that you may
+            need for the comfortable use of the equipment.
           </p>
-          <br>
+          <br />
           <ul class="services__tab-item-list">
             <li class="services__tab-item-list-element">
-              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark">
-              <p>Disposable cups made from recyclable cardboard can be branded to match your company name.</p>
+              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark" />
+              <p>
+                Disposable cups made from recyclable cardboard can be branded
+                to match your company name.
+              </p>
             </li>
             <li class="services__tab-item-list-element">
-              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark">
-              <p>Any number of tissues, disposable spoons, sugar sticks, and other accessories.</p>
+              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark" />
+              <p>
+                Any number of tissues, disposable spoons, sugar sticks, and
+                other accessories.
+              </p>
             </li>
             <li class="services__tab-item-list-element">
-              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark">
-              <p>Replaceable filters and other spare parts for coffee machines of any brand.</p>
+              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark" />
+              <p>
+                Replaceable filters and other spare parts for coffee machines
+                of any brand.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="services__tab-content container" id="repair">
+        <img class="services__maint-image" src="img/repair.png" alt="repair" />
+        <div class="services__tab-right-content">
+          <p class="services__tab-item-title">Coffee Machine Repair.</p>
+          <p class="services__tab-item-text">
+            Coffee machines, like any other equipment, can fail. If that's
+            your case, it's better to entrust it to a competent specialist.
+          </p>
+          <br />
+          <p class="services__tab-item-text">
+            Our employees will carry out repairs as soon as possible. They
+            carry out maintenance of coffee machines of all brands and models
+            that we offer for rent. The experts will quickly arrive at the
+            site and solve a problem of any complexity.
+          </p>
+          <br />
+          <ul class="services__tab-item-list">
+            <li class="services__tab-item-list-element">
+              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark" />
+              <p>
+                Regular service. Scheduled maintenance will help to keep your
+                coffee machine in the best condition.
+              </p>
+            </li>
+            <li class="services__tab-item-list-element">
+              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark" />
+              <p>
+                Replacement of all spare parts and consumables when needed fo
+                free.
+              </p>
+            </li>
+            <li class="services__tab-item-list-element">
+              <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark" />
+              <p>
+                Prompt replacement of the coffee machine in the event of a
+                malfunction.
+              </p>
             </li>
           </ul>
         </div>
       </article>
     </div>
-    <div class="services__tab-item">Repair</div>
-    <article class="services__tab-content container">
-      <img class="services__maint-image" src="img/repair.png" alt="repair">
-      <div class="services__tab-right-content">
-        <p class="services__tab-item-title">
-          Coffee Machine Repair.
-        </p>
-        <p class="services__tab-item-text">
-          Coffee machines, like any other equipment, can fail. If that's your case, it's better to entrust it to a
-          competent
-          specialist.
-        </p>
-        <br>
-        <p class="services__tab-item-text">
-          Our employees will carry out repairs as soon as possible. They carry out maintenance of coffee machines of
-          all
-          brands
-          and models that we offer for rent. The experts will quickly arrive at the site and solve a problem of any
-          complexity.
-        </p>
-        <br>
-        <ul class="services__tab-item-list">
-          <li class="services__tab-item-list-element">
-            <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark">
-            <p>Regular service. Scheduled maintenance will help to keep your coffee machine in the best condition.</p>
-          </li>
-          <li class="services__tab-item-list-element">
-            <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark">
-            <p>Replacement of all spare parts and consumables when needed fo free.</p>
-          </li>
-          <li class="services__tab-item-list-element">
-            <img class="services__red-check-mark-image" src="img/red-check-mark.svg" alt="red check mark">
-            <p>Prompt replacement of the coffee machine in the event of a malfunction.</p>
-          </li>
-        </ul>
-      </div>
-    </article>
   </section>
+  <script src="js/services.js"></script>
 </body>
 
 </html>
