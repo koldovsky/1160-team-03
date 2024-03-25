@@ -1,5 +1,11 @@
 // 1. Messi Goals https://www.codewars.com/kata/grasshopper-messi-goals-function/train/javascript
 function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+<<<<<<< HEAD
+    const totalNumberOfGoalsInAllThreeLeagues =
+      laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+    return totalNumberOfGoalsInAllThreeLeagues;
+  }
+=======
   return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
 }
 
@@ -31,3 +37,4 @@ function litres(time) {
 function lovefunc(flower1, flower2) {
   return flower1 % 2 !== flower2 % 2;
 }
+>>>>>>> d39e2500d3391bd838e2fc362613c7c92ca32eda

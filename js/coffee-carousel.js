@@ -1,6 +1,5 @@
 const coffeeCarousel = document.querySelector(".coffee__carousel-slides");
 const coffeeItems = Array.from(document.getElementsByClassName("coffee__carousel-slide"));
-// const coffeeItems = document.getElementsByClassName("coffee__carousel-slide");
 const nextButton = document.querySelector(".coffee__carousel__button--right");
 const prevButton = document.querySelector(".coffee__carousel__button--left");
 
