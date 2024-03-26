@@ -4,7 +4,6 @@ function init() {
     import('./brands-carousel.js');
     import('./coffee-machines-carousel.js');
     import('./testimonials-carousel.js');
-    import('./coffee-carousel-items.js');
     import('./coffee-carousel.js');
     import('./services.js');
     import('./footer.js');
