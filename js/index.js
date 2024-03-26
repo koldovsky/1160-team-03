@@ -6,6 +6,7 @@ function init() {
     import('./coffee-carousel-items.js');
     import('./coffee-carousel.js');
     import('./services.js');
+    import('./footer.js');
 }
 
 const totalPartials = document.querySelectorAll('[hx-trigger="load"], [data-hx-trigger="load"]').length;
