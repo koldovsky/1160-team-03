@@ -36,7 +36,6 @@ let currentCoffeeSlideIdx = 0;
 
 function renderCoffeeSlide() {
     coffeeCarousel.innerHTML = ""; 
-    console.log(coffeeItemsC);
     coffeeCarousel.appendChild(coffeeItemsC[currentCoffeeSlideIdx]);
     if (window.matchMedia("(min-width:768px)").matches) {
       const secondCoffeeSlideIdx = (currentCoffeeSlideIdx + 1) % coffeeItemsC.length;
