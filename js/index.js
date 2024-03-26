@@ -2,6 +2,7 @@ function init() {
     import('./header.js');
     import('./hero.js');
     import('./brands-carousel.js');
+    import('./coffee-machines-carousel.js');
     import('./testimonials-carousel.js');
     import('./coffee-carousel-items.js');
     import('./coffee-carousel.js');
