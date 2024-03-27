@@ -1,9 +1,15 @@
 .coffee__production {
   display: flex;
   justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   height: 603px;
   position: relative;
 }
+
+.coffee__container-production {
+}
+
 .coffee__production-image {
   display: flex;
   justify-content: center;
@@ -31,6 +37,7 @@
   position: relative;
   color: var(--light-text-color);
   align-self: center;
+  font-size: 48px;
 }
 
 .coffee__super-title {
