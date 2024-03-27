@@ -37,6 +37,12 @@
   font-weight: 700;
   line-height: 15px;
   max-width: 114.98px;
+  transition: background-color .4s ease-in-out, border-color .4s ease-in-out;
+}
+
+.banner__button-rent-now-link:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
 .banner__button-learn-more-link {
@@ -59,11 +65,17 @@
   line-height: 15px;
   max-width: 126.95px;
   max-height: 47px;
+  transition: background-color .4s ease-in-out, color .4s ease-in-out;
+}
+
+.banner__button-learn-more-link:hover {
+  background-color: var(--secondary-color);
+  color: var(--banner-button-text-color);
 }
 
 .banner__title-text {
   font-size: 34px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-family-primary);
   font-weight: 700;
   color: var(--secondary-color);
   text-transform: none;
@@ -71,7 +83,7 @@
 }
 
 .banner__description-text {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-family-secondary);
   font-size: 16px;
   line-height: 25.6px;
   margin: 0;
