@@ -1,0 +1,41 @@
+.coffee__production {
+    display: flex;
+    justify-content: center;
+    height: 603px;
+    width: 1209;
+    background-size: cover;
+    background-image: url(https://res2.weblium.site/res/6059b710530fd500214ccb5a/605e1bf83059220021b8e021?nowebp);
+    background-attachment: fixed;
+    filter: grayscale(100%);
+    position: relative;
+}
+.coffee__production-overlay {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    justify-content: center;
+    position: absolute;
+}
+
+.coffee__title {
+    z-index: 2;
+    position: relative;
+    color: var(--light-text-color);
+    align-self: center;
+}
+
+.coffee__super-title {
+    z-index: 2;
+    position: relative;
+    align-self: center;
+}
+
+
+.youtube-coffee__picture {
+    z-index: 2;
+    position: relative;
+    color: var(--light-text-color);
+    align-self: center;
+}
