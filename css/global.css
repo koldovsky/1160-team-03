@@ -41,6 +41,7 @@
     --container-size: 1200px;
     --font-family-primary: "Poppins", sans-serif;
     --font-family-secondary: "Roboto", sans-serif;
+    --background-coffee-production: rgba(22, 22, 22, 0.8);
     scroll-behavior: smooth;
 }
 
