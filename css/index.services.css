@@ -87,6 +87,7 @@ li.services__tab-item-list-element {
 .services__tab-item-element {
     list-style-type: none;
     padding: 15px 20px;
+    cursor: pointer;
 }
 
 .services__tab-item {
@@ -124,7 +125,6 @@ li.services__tab-item-list-element {
     .services__maint-image {
         border-radius: 5px;
         width: 560px;
-        height: 595px;
         object-fit: cover;
     }
 
@@ -137,5 +137,18 @@ li.services__tab-item-list-element {
 
     .services__sub-title {
         padding: 0px 180px;
+    }
+}
+
+@media (min-width: 1030px) {
+    .services__maint-image {
+        width: 560px;
+        height: 595px;
+        object-fit: cover;
+        flex: 50%;
+    }
+
+    .services__tab-right-content {
+        flex: 50%;
     }
 }
