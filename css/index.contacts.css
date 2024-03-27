@@ -1,0 +1,103 @@
+.contacts {
+  background-color: var(--light-background-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.contacts__info,
+.contacts__request-a-quote {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  max-width: 50%;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .contacts__info,
+  .contacts__request-a-quote {
+    min-width: 50%;
+    max-width: 100%;
+  }
+}
+
+.contacts__info-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.contacts__info-text,
+.contacts__info-address-text,
+.contacts__info-hours-text {
+  color: var(--text-color);
+}
+
+.contacts__info-contacts a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.contacts__info {
+  text-align: left;
+  padding: 20px;
+  align-items: start;
+}
+
+.contacts__info-address,
+.contacts__info-hours,
+.contacts__info-contacts {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__info-address-title,
+.contacts__info-hours-title,
+.contacts__info-contacts-title {
+  margin-right: 10px;
+}
+
+.contacts__request-a-quote {
+  background-color: var(--light-text-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 570px;
+  border-radius: 10px;
+  display: grid;
+  align-items: center;
+}
+
+.contacts__request-a-quote-form {
+  padding: 16px 25px;
+  width: 100%;
+}
+
+.contacts__request-a-quote-full-name,
+.contacts__request-a-quote-phone-number,
+.contacts__request-a-quote-email,
+.contacts__request-a-quote-message {
+  width: calc(100% - 50px);
+  height: 50px;
+  margin-bottom: 10px;
+  background-color: var(--light-background-color);
+  border: none;
+  outline: none;
+}
+
+.contacts__request-a-quote-message {
+  height: 150px;
+}
+
+.contacts__request-a-quote-button {
+  width: 100%;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

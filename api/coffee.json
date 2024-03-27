@@ -1,0 +1,27 @@
+[
+    {
+        "image": "img/coffee-classico-pack.png", 
+        "title": "Classico", 
+        "price": "4,50USD"
+    },
+    {
+        "image": "img/coffee-intenso-pack.png", 
+        "title": "Intenso", 
+        "price": "5,00USD"
+    },
+    {
+        "image": "img/coffee-espresso-pack.png", 
+        "title": "Espresso", 
+        "price": "4,50USD"
+    },
+    {
+        "image": "img/coffee-decaf-pack.png", 
+        "title": "Decaf", 
+        "price": "4,50USD"
+    },
+    {
+        "image": "img/coffee-mocha-pack.png", 
+        "title": "Mocha", 
+        "price": "5,00USD"
+    }
+]

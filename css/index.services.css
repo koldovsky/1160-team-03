@@ -44,7 +44,8 @@
 }
 
 .services__tab-right-content {
-    padding: 60px;
+    padding: 60px 60px 0px 60px;
+    flex: 50%;
 }
 
 .services__tab-item-title {

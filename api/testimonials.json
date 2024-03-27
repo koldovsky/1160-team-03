@@ -1,4 +1,4 @@
-const articles = [
+[
     {
         "image": "img/testimonials/testimonials-person-1.webp",
         "title": "Josh Mendel",
@@ -24,22 +24,3 @@ const articles = [
         "date": "March 22, 2022"
     }
 ]
-
-function renderArticles(articles) {
-    let articlesDomString = ``;
-    for (const article of articles) {
-        articlesDomString += `
-        <article class="testimonials__carousel-item">
-          <div class="testimonials_carousel-item-image">
-            <img src="${article.image}" alt="Photo of ${article.title}">
-          </div>
-          <p class="testimonials__carousel-item-name">${article.title}</p>
-          <p class="testimonials__carousel-item-feedback">${article.description}</p>
-          <p class="testimonials__carousel-item-date">${article.date}</p>
-        </article>`
-    }
-    const articlesContainer = document.querySelector('.testimonials__carousel');
-    articlesContainer.innerHTML = articlesDomString;
-}
-
-renderArticles(articles);

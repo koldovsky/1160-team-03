@@ -2,11 +2,11 @@ function init() {
     import('./header.js');
     import('./hero.js');
     import('./brands-carousel.js');
-    import('./testimonials-render-articles.js');
+    import('./coffee-machines-carousel.js');
     import('./testimonials-carousel.js');
-    import('./coffee-carousel-items.js');
     import('./coffee-carousel.js');
     import('./services.js');
+    import('./footer.js');
 }
 
 const totalPartials = document.querySelectorAll('[hx-trigger="load"], [data-hx-trigger="load"]').length;

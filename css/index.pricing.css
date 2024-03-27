@@ -18,7 +18,7 @@
 }
 
 @media (min-width: 768px) {
-    
+
     .pricing__sub-title {
         font-size: 37px;
         line-height: 44.4px;
@@ -92,7 +92,7 @@
 
     .pricing__coffee-machine-image {
         width: 70px;
-        height: 70px; 
+        height: 70px;
     }
 
     .pricing__coffee-machine-image img {
@@ -159,11 +159,6 @@
     color: var(--secondary-color);
     font-style: italic;
     font-weight: 400;
-}
-
-.pricing__plan-benefits-list {
-    list-style-image: url(../img/pricing/tick-icon.svg);
-    list-style-position: inside;
 }
 
 .pricing__benefits-list-item {
