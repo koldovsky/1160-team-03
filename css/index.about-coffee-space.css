@@ -2,12 +2,12 @@
     text-align: left;
     font-size: 34px;
     font-family: "Poppins", sans-serif;
-    color:rgb(34, 34, 34);
+    color:var(--header-burger-btn-color);
     font-weight: 700;
     line-height: 40.8px;
 }
 .about-list{
-   color:rgb(34, 34, 34);;
+   color:var(--header-burger-btn-color);
    font-family: "Roboto", sans-serif;
    font-size: 16px;
    font-weight: 400;
@@ -17,7 +17,7 @@
 .text-about-coffee {
    font-size: 18px;
    font-family: "Roboto", sans-serif;
-   color: rgb(101, 101, 101);
+   color: var(--header-nav-link-color);
    text-align: left;
    line-height: 27px;
 }
@@ -25,7 +25,7 @@
    font-size: 16px;
    font-weight: 400;
    font-family:"Roboto", sans-serif;
-   color: rgb(140, 140, 140);
+   color: var(--banner-description-color);
    line-height: 25.6px;
 }
 .about-coffee-container {
