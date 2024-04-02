@@ -11,12 +11,12 @@
 }
 
 .coffee__main-title,
-.coffee__title,
+.coffee__title-p,
 .coffee__text {
   text-align: center;
 }
 
-.coffee__title {
+.coffee__title-p {
   font-size: 34px;
   font-family: "Poppins", sans-serif;
   color: var(--secondary-color);

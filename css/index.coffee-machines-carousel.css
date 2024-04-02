@@ -1,77 +1,149 @@
 .coffee-machines {
-    text-align: center;
-    margin: 15px;
-  }
-  
-  .coffee-machines h2 {
-    font-family: var(--font-family-secondary);
-    font-size: 12px;
-  }
-  
-  .coffee-machines__first-titel {
-    font-family: var(--font-family-primary);
-    font-size: 34px;
-    font-weight: 700;
-  }
-  
-  .coffee-machines__second-titel {
-    font-family: var(--font-family-primary);
-    font-size: 18px;
-    font-weight: 300;
-  }
-  
-  .coffee-machines__img {
-    width: 248px;
-  }
-  
-  .coffee-machines__items-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .coffee-machine__item {
-    width: 250px;
-    font-family: var(--font-family-secondary);
-    font-size: 24px;
-    margin: 20px;
-  }
-  
-  .coffee-machine__item a {
-    text-decoration: none;
-  }
-  
-  .coffee-machine__item h6 {
-    color: var(--secondary-color);
-    font-size: 20px;
-    font-weight: 400;
-    margin-top: 24px;
-  }
-  
-  .coffee-machine__item p {
-    color: var(--primary-color);
-    font-weight: 500;
-  }
-  
-  .coffee-machine__button {
-    background-color: var(--primary-color);
-    border: none;
-    color: var(--hero-text-color);
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 2px;
+  text-align: center;
+  margin: 15px;
 }
-.coffee-machines__button:hover {  
-    background-color: var(--secondary-color);
-}    
-@media (min-width: 768px){
-    .coffee-machines__first-titel{
-        font-size: 40px;
-    }
 
+.coffee-machines h2 {
+  font-family: var(--font-family-secondary);
+  font-size: 12px;
+}
+
+.coffee-machines__first-titel {
+  font-family: var(--font-family-primary);
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.coffee-machines__second-titel {
+  font-family: var(--font-family-primary);
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.coffee-machines__img {
+  width: 248px;
+}
+
+.coffee-machines__items-container {
+  display: flex;
+  justify-content: center;
+}
+
+.coffee-machine__item {
+  width: 250px;
+  font-family: var(--font-family-secondary);
+  font-size: 24px;
+  margin: 20px;
+}
+
+.coffee-machine__item a {
+  text-decoration: none;
+}
+
+.coffee-machine__item h6 {
+  color: var(--secondary-color);
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 24px;
+}
+
+.coffee-machine__item p {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.coffee-machine__button {
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--hero-text-color);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.coffee-machines__button:hover {  
+  background-color: var(--secondary-color);
+}    
+.coffee-machines__carousel {
+  position: relative;
+  margin-top: 45px;
+}
+
+.coffee-machines__carousel__button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--arrow-icon-background);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.coffee-machines__carousel__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/button-arrow.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: invert(17%) sepia(75%) saturate(4531%) hue-rotate(351deg) brightness(72%) contrast(112%);
+}
+
+.coffee-machines__carousel__button--left {
+  left: 0;
+  transform: translate(-50%, -50%) scaleX(-1);
+}
+
+.coffee-machines__carousel__button--right {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.coffee-machines__carousel-slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.coffee-machines__carousel-slide {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+}
+
+
+@media (min-width: 768px){
+  .coffee-machines__first-titel{
+      font-size: 40px;
+  }
+  .coffee-machines__carousel__button {
+      width: 30px;
+      height: 30px;
+  }
+
+  .coffee-machines__carousel__button::after {
+      width: 30px;
+      height: 30px;
+      background-size: 30px;
+  }
+
+  .coffee-machines__carousel-slides {
+      gap: 30px;
+  }
 }
