@@ -3,52 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Coffee Space</title>
   <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
 </head>
 <body>
   <header class="header">
-    <div class="header__top">
-      <div class="header__top-address">
-        <a href="#">
-          <img src="img/icon-address.svg" alt="address search icon" class="header__top-address-icon">
-        </a>
-        <address class="header__top-address-text">303 E 61 st St, New York, NY 10065</address>
-      </div>
-      <div class="header__top-number">
-        <a href="#">
-          <img src="img/icon-number.svg" alt="phone icon">
-        </a>
-        <a href= "tel:12345678900" class="header__top-number-text">
-        +1 (234) 567-89-00
-        </a>
+    <div class="header__wrap">
+      <div class="header__top container">
+        <div class="header__top-address">
+          <a href="#">
+            <img src="img/icon-address.svg" alt="address search icon" class="header__top-address-icon">
+          </a>
+          <address class="header__top-address-text">303 E 61 st St, New York, NY 10065</address>
+        </div>
+        <div class="header__top-number">
+          <a href="#">
+            <img src="img/icon-number.svg" alt="phone icon" class="header__top-number-icon">
+          </a>
+          <a href= "tel:12345678900" class="header__top-number-text">
+          +1 (234) 567-89-00
+          </a>
+        </div>
       </div>
     </div>
-    <div class="header__bottom">
+    <div class="header__bottom container">
       <a href="#" class="header__logo-link">
-        <img width="200" class="header__logo" src="img/logo-coffee-space.svg" alt="logo coffee space">
+        <img class="header__logo" src="img/logo-coffee-space.svg" alt="logo coffee space">
       </a>
-      <nav class="header__nav">
-        <a href="#" class="header__nav-link">About Us</a>
-        <a href="#" class="header__nav-link">Coffee Machines</a>
-        <a href="#" class="header__nav-link">Testimonials</a>
-        <a href="#" class="header__nav-link">Services</a>
-        <a href="#" class="header__nav-link">Coffee</a>
-        <a href="#" class="header__nav-link">Pricings</a>
-        <a href="#" class="header__nav-link">Contacts</a>
-      </nav>
-      <div class="header__links">
-        <a href="#" class="header__links-link">
-          <img class="header__links-icon" src="img/icon-facebook.svg" alt="icon_facebook">
-        </a>
-        <a href="#" class="header__links-link">
-          <img class="header__links-icon" src="img/icon-instagram.svg" alt="icon instagram">
-        </a>
-        <a href="#" class="header__links-link">
-          <img class="header__links-icon" src="img/icon-youtube.svg" alt="icon youtube">
-        </a>
+      <a href="#" class="header__menu-btn">
+        <span class="header__menu-icon"></span>
+      </a>
+      <div class="header__bottom-inform">
+        <nav class="header__nav">
+          <a href="#" class="header__nav-link">About Us</a>
+          <a href="#" class="header__nav-link">Coffee Machines</a>
+          <a href="#" class="header__nav-link">Testimonials</a>
+          <a href="#" class="header__nav-link">Services</a>
+          <a href="#" class="header__nav-link">Coffee</a>
+          <a href="#" class="header__nav-link">Pricings</a>
+          <a href="#" class="header__nav-link">Contacts</a>
+        </nav>
+        <div class="header__media">
+          <a href="#" class="header__media-link">
+            <img class="header__media-icon" src="img/icon-facebook.svg" alt="icon_facebook">
+          </a>
+          <a href="#" class="header__media-link">
+            <img class="header__media-icon" src="img/icon-instagram.svg" alt="icon instagram">
+          </a>
+          <a href="#" class="header__media-link">
+            <img class="header__media-icon" src="img/icon-youtube.svg" alt="icon youtube">
+          </a>
+        </div>
       </div>
-    </div> 
-  </header>  
+    </div>
+  </header>   
 </body>
 </html>

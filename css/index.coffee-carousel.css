@@ -2,13 +2,21 @@
   padding: 55px 24px 90px;
 }
 
+.coffee_description {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .coffee__main-title,
-.coffee__title,
+.coffee__title-p,
 .coffee__text {
   text-align: center;
 }
 
-.coffee__title {
+.coffee__title-p {
   font-size: 34px;
   font-family: "Poppins", sans-serif;
   color: var(--secondary-color);
@@ -26,33 +34,94 @@
   margin-top: 15px;
 }
 
+.coffee__carousel{
+  display: grid;
+  position: relative;
+  
+}
+
 .coffee__carousel-slides {
   margin-top: 45px;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
 }
 
 .coffee__carousel__button {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
+  border: none;
+  background-color: var(--arrow-icon-background);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.coffee__carousel-slide {
-  padding: 15px;
+.coffee__carousel__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/button-arrow.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: invert(17%) sepia(75%) saturate(4531%) hue-rotate(351deg) brightness(72%) contrast(112%);
 }
+
+.coffee__carousel__button--left {
+  left: 0;
+  transform: translate(-50%, -50%) scaleX(-1);
+}
+
+.coffee__carousel__button--right {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
 
 @media (min-width: 768px) {
+  .coffee {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
   .coffee__carousel-slides {
-    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+  }
+  .coffee_description {
+    width: 459px;
   }
 }
 
 @media (min-width: 1024px) {
+  .coffee {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .coffee_description {
+    width: 619px;
+  }
   .coffee__carousel-slides {
-    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+  }
+}
+
+@media (min-width: 1202px) {
+  .coffee__carousel__button {
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+  }
+  .coffee__carousel__button::after {
+    background-size: 30px;
+    width: 30px; 
+    height: 30px; 
   }
 }
 

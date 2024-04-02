@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Document</title>
+    <title>Coffee Space</title>
     <script src="https://unpkg.com/htmx.org@1.9.10"
         integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
         crossorigin="anonymous"></script>
@@ -15,30 +15,21 @@
         <h2>COFFEE MACHINES</h2>
         <p class="coffee-machines__first-titel">Discover Coffee Machines We Offer</p>
         <p class="coffee-machines__second-titel">We offer professional coffee machines for commercial and home use.</p>
-        <div class="coffee-machines__container">
-            <a href="#"><img class="coffee-machines__img " src="img/coffeemachines0.png" alt="SMIK Coffe machines">
-            <h6>SMIK Coffe machines</h6></a>
-            <p>199,00USD</p>
-            <button class="coffee-machines__button">Add to Cart</button>
+        <div class="coffee-machines__items-container">
+            
         </div>
-        <div class="coffee-machines__container">       
-            <a href="#"><img class="coffee-machines__img" src="img/coffeemachines1.png" alt="La Spezia Coffee Machine">
-            <h6>La Spezia Coffee Machine</h6></a>
-            <p>499,00USD</p>
-            <button class="coffee-machines__button">Add to Cart</button>
-       </div>
-        <div class="coffee-machines__container">
-            <a href="#"><img class="coffee-machines__img" src="img/coffeemachines2.png" alt="FROST Coffee Machine">
-            <h6>FROST Coffee Machine</h6></a>
-            <p>199,00USD</p>
-            <button class="coffee-machines__button">Add to Cart</button>
-        </div>
-        <div class="coffee-machines__container">
-            <a href="#"><img class="coffee-machines__img" src="img/coffeemachines3.png" alt="SMIK 2 Coffee Machine">
-            <h6>SMIK 2 Coffee Machine</h6></a>
-            <p>299,00USD</p>    
-            <button class="coffee-machines__button">Add to Cart</button>
-        </div>
+        <div class="coffee-machines__carousel">
+            <button
+              class="coffee-machines__carousel__button coffee-machines__carousel__button--left"
+              type="button"
+            ></button>
+            <div class="coffee-machines__carousel-slides"></div>
+            <button
+              class="coffee-machines__carousel__button coffee-machines__carousel__button--right"
+              type="button"
+            ></button>
+          </div>
     </div>
+
 </body>
 </html>

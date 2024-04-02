@@ -1,53 +1,154 @@
 .banner {
-    padding: 90px 0 60px; 
-  }  
+  padding: 90px 20px 60px 20px;
+}
 
 .banner__container {
-    min-width: 272px;
-    min-height: 582.34px;
-    background-image: url(../img/banner-background.png);
-    background-size: cover;
-    background-position: center;
-    width: 80%;
-    padding: 43px 39px;
-    margin: auto;
+  max-width: 1170px;
+  min-height: 356.19px;
+  max-height: 582.34px;
+  background-image: url(../img/banner-background.png);
+  background-size: cover;
+  background-position: 50% 75%;
+  padding: 55px 45px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+}
+
+.banner__button-rent-now-link {
+  display: inline-block;
+  text-decoration: none;
+  width: auto;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 22px;
+  padding-right: 22px;
+  border: 3px solid;
+  border-radius: 2px;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--banner-button-text-color);
+  font-family: var(--font-family-secondary);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  max-width: 114.98px;
+  transition: background-color .4s ease-in-out, border-color .4s ease-in-out;
+}
+
+.banner__button-rent-now-link:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.banner__button-learn-more-link {
+  display: inline-block;
+  text-decoration: none;
+  width: auto;
+  margin-top: 10px;
+  margin-left: 0px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 22px;
+  padding-right: 22px;
+  border: 3px solid;
+  border-radius: 2px;
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  font-family: var(--font-family-secondary);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  max-width: 126.95px;
+  max-height: 47px;
+  transition: background-color .4s ease-in-out, color .4s ease-in-out;
+}
+
+.banner__button-learn-more-link:hover {
+  background-color: var(--secondary-color);
+  color: var(--banner-button-text-color);
 }
 
 .banner__title-text {
-    font-size: 34px;
-    font-family: "Poppins", sans-serif;
-    color: black;
-    text-transform: none; 
+  font-size: 34px;
+  font-family: var(--font-family-primary);
+  font-weight: 700;
+  color: var(--secondary-color);
+  text-transform: none;
+  margin-bottom: 0;
 }
 
 .banner__description-text {
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
+  font-family: var(--font-family-secondary);
+  font-size: 16px;
+  line-height: 25.6px;
+  margin: 0;
+  padding: 0;
+  color: var(--banner-description-color);
 }
 
 .banner__title-word-highlight {
-    color: red;
+  color: var(--primary-color);
 }
 
 .banner__buttons {
-    display: flex;
-    flex-direction: column;
-}
-
-@media (min-width: 768px) {
-    .banner {
-        padding: 105px 0 60px;
-      }  
-}
-
-@media (min-width: 992px) {
-    .banner {
-        padding: 120px 0 60px;
-      }  
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 388px) {
-    .banner__buttons {
-        flex-direction: row;
-    } 
+  .banner__buttons {
+    flex-direction: row;
+  }
+  .banner__button-learn-more-link {
+    margin-top: 45px;
+    margin-left: 10px;
+    padding-bottom: 0px;
+  }
+  .banner__button-rent-now-link {
+    margin-top: 45px;
+    margin-right: 10px;
+  }
+  .banner__container {
+    padding: 60px 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner {
+    padding: 105px 20px 60px 20px;
+  }
+  .banner__title-text {
+    margin-bottom: 34px;
+    font-size: 37px;
+  }
+}
+
+@media (min-width: 992px) {
+  .banner {
+    padding: 120px 20px 60px 20px;
+  }
+  .banner__title-text {
+    font-size: 40px;
+  }
+  .banner__container {
+    padding: 80px 60px;
+    max-height: 356.19px;
+  }
+  .banner__button-learn-more-link {
+    margin-top: 28px;
+  }
+  .banner__button-rent-now-link {
+    margin-top: 28px;
+  }
+}
+
+@media (min-width: 1350px) {
+  .banner {
+    padding: 120px 0 60px 0;
+  }
 }
