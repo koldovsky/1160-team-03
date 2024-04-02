@@ -1,25 +1,5 @@
-const coffeeMachines = [
-    {
-        "image": "img/coffeemachines0.png", 
-        "title": "SMIK Coffe machines", 
-        "price": "199,00USD"
-    },
-    {
-        "image": "img/coffeemachines1.png", 
-        "title": "La Spezia Coffee Machine", 
-        "price": "499,00USD"
-    },
-    {
-        "image": "img/coffeemachines2.png", 
-        "title": "FROST Coffee Machine", 
-        "price": "199,00USD"
-    },
-    {
-        "image": "img/coffeemachines3.png", 
-        "title": "SMIK 2 Coffee Machine", 
-        "price": "299,00USD"
-    }
-];
+const coffeeMachines = await fetch('api/machines.json');
+const articles = await coffeeMachines.json();;
 
 function renderCoffeeMachines(coffeeMachinesList){
     let machinesDomString = ``;
