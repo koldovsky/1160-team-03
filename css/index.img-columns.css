@@ -1,9 +1,13 @@
-.img-container1{
+.img-container1,
+.img-container2 {
   position: relative;
+  margin: 0 10px; /* Змініть відстань між контейнерами за потребою */
 }
 
-.container1-text{
-position: absolute;
-top: 0px;
-justify-content: center;
+.container-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
