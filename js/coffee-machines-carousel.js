@@ -20,7 +20,14 @@ function showSlide(index) {
 
   currentIndex = index;
 
+  // Відміна попередньої трансформації перед оновленням, щоб уникнути здвигу при перемиканні.
+  carouselInner.style.transition = 'none';
   carouselInner.style.transform = `translateX(-${index * 100}%)`;
+
+  // Задержка для анімації переходу
+  setTimeout(() => {
+    carouselInner.style.transition = ''; // Повертаємо стандартну анімацію
+  }, 50);
 }
 
 // Render your coffee machines dynamically here
@@ -53,8 +60,8 @@ function renderCoffeeMachines(coffeeMachinesList) {
             </div>
         `;
     }
-    carouselInner.innerHTML = machinesDomString;
-    showSlide(0); // Show the first slide initially
+    carouselInner.innerHTML = machinesDomString.repeat(3); // Повторюємо елементи, щоб забезпечити циклічність
+    showSlide(coffeeMachinesList.length); // Показуємо перший елемент з середини, щоб мати можливість рухатися в обидва боки без зазору
 }
 
 fetchAndRenderCoffeeMachines();

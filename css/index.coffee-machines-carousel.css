@@ -69,6 +69,7 @@
 .coffee-machines__button:hover {  
     background-color: var(--secondary-color);
 }    
+
 .coffee-machines__carousel {
   position: relative;
   width: 100%;
@@ -106,5 +107,6 @@
     .coffee-machines__first-titel{
         font-size: 40px;
     }
+
 
 }
