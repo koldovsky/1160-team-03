@@ -1,4 +1,30 @@
-async function fetchCoffeeMachines() {
+const carouselInner = document.querySelector('.coffee-machines__carousel-inner');
+const prevButton = document.querySelector('.coffee-machines__carousel-prev');
+const nextButton = document.querySelector('.coffee-machines__carousel-next');
+
+let currentIndex = 0;
+
+prevButton.addEventListener('click', () => {
+  showSlide(currentIndex - 1);
+});
+
+nextButton.addEventListener('click', () => {
+  showSlide(currentIndex + 1);
+});
+
+function showSlide(index) {
+  const slides = document.querySelectorAll('.coffee-machines__carousel-item');
+  const totalSlides = slides.length;
+
+  index = (index + totalSlides) % totalSlides;
+
+  currentIndex = index;
+
+  carouselInner.style.transform = `translateX(-${index * 100}%)`;
+}
+
+// Render your coffee machines dynamically here
+async function fetchAndRenderCoffeeMachines() {
     try {
         const response = await fetch('api/machines.json');
         if (!response.ok) {
@@ -15,18 +41,20 @@ function renderCoffeeMachines(coffeeMachinesList) {
     let machinesDomString = ``;
     for (const machine of coffeeMachinesList) {
         machinesDomString += `
-            <div class="coffee-machine__item">
-                <a href="#">
-                    <img class="coffee-machine__img" src="${machine.image}" alt="${machine.title}">
-                    <h6>${machine.title}</h6>
-                </a>
-                <p>${machine.price}</p>
-                <button class="coffee-machine__button">Add to Cart</button>
+            <div class="coffee-machines__carousel-item">
+                <div class="coffee-machines__coffee-machine">
+                    <a href="#" class="coffee-machines__coffee-machine-link">
+                        <img class="coffee-machines__coffee-machine-img" src="${machine.image}" alt="${machine.title}">
+                        <h6 class="coffee-machines__coffee-machine-title">${machine.title}</h6>
+                    </a>
+                    <p class="coffee-machines__coffee-machine-price">${machine.price}</p>
+                    <button class="coffee-machines__coffee-machine-button">Add to Cart</button>
+                </div>
             </div>
         `;
     }
-    const machinesContainer = document.querySelector('.coffee-machines__items-container');
-    machinesContainer.innerHTML = machinesDomString;
+    carouselInner.innerHTML = machinesDomString;
+    showSlide(0); // Show the first slide initially
 }
 
-fetchCoffeeMachines();
+fetchAndRenderCoffeeMachines();

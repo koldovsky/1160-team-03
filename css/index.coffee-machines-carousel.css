@@ -69,6 +69,39 @@
 .coffee-machines__button:hover {  
     background-color: var(--secondary-color);
 }    
+.coffee-machines__carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.coffee-machines__carousel-inner {
+  display: flex;
+}
+
+.coffee-machines__carousel-item {
+  flex: 0 0 auto;
+}
+
+.coffee-machines__carousel-prev, .coffee-machines__carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.coffee-machines__carousel-prev {
+  left: 10px;
+}
+
+.coffee-machines__carousel-next {
+  right: 10px;
+}
+
 @media (min-width: 768px){
     .coffee-machines__first-titel{
         font-size: 40px;
