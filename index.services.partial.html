@@ -19,20 +19,20 @@
     </p>
     <div class="services__tab container">
       <ul class="services__tab-item">
-        <li class="services__tab-item-element tablinks" onclick="openTab(event, 'rental')" id="defaultOpen">
+        <li class="services__tab-item-element tablinks active" id="rental-tab-link">
           Rental&nbspService
         </li>
-        <li class="services__tab-item-element tablinks" onclick="openTab(event, 'consulting')">
+        <li class="services__tab-item-element tablinks" id="consulting-tab-link">
           Consulting
         </li>
-        <li class="services__tab-item-element tablinks" onclick="openTab(event, 'accessories')">
+        <li class="services__tab-item-element tablinks" id="accessories-tab-link">
           Accessories
         </li>
-        <li class="services__tab-item-element tablinks" onclick="openTab(event, 'repair')">
+        <li class="services__tab-item-element tablinks" id="repair-tab-link">
           Repair
         </li>
       </ul>
-      <article class="services__tab-content container" id="rental">
+      <article class="services__tab-content container" id="rental" style="display: flex; color: black;">
         <img class="services__maint-image" src="img/rental-machine.png" alt="rental machine" />
         <div class="services__tab-right-content">
           <p class="services__tab-item-title">Coffee Machine Rental.</p>
@@ -76,7 +76,7 @@
           </ul>
         </div>
       </article>
-      <article class="services__tab-content container" id="consulting">
+      <article class="services__tab-content container" id="consulting" style="display: none; color: black;">
         <img class="services__maint-image" src="img/consulting.png" alt="consulting" />
         <div class="services__tab-right-content">
           <p class="services__tab-item-title">
@@ -121,7 +121,7 @@
           </ul>
         </div>
       </article>
-      <article class="services__tab-content container" id="accessories">
+      <article class="services__tab-content container" id="accessories" style="display: none; color: black;">
         <img class="services__maint-image" src="img/accessories.png" alt="accessories" />
         <div class="services__tab-right-content">
           <p class="services__tab-item-title">Coffee Machine Accessories.</p>
@@ -165,7 +165,7 @@
           </ul>
         </div>
       </article>
-      <article class="services__tab-content container" id="repair">
+      <article class="services__tab-content container" id="repair" style="display: none; color: black;">
         <img class="services__maint-image" src="img/repair.png" alt="repair" />
         <div class="services__tab-right-content">
           <p class="services__tab-item-title">Coffee Machine Repair.</p>
@@ -210,8 +210,7 @@
         </div>
       </article>
     </div>
-  </section>
-  <script src="js/services.js"></script>
+  </section> 
 </body>
 
 </html>
