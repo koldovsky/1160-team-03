@@ -105,6 +105,13 @@
   width: 270px;
   height: 50px;
 }
+.counting_those_who_are_intrested {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  text-transform: none !important;
+  width: 240px;
+  height: 35px;
+}
 
 .footer__logo,
 .footer__navigation,
@@ -143,7 +150,7 @@
 
 .footer__navigation-icon-facebook,
 .footer__navigation-icon-instagram,
-.footer__navigation-icon-youtube {
+.footer__navigation-icon-youtube{
   width: 32px;
   display: inline-flex;
 }

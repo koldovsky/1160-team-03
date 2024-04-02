@@ -55,7 +55,7 @@
     }
 
     .pricing__plan-column {
-        padding: 40px 37px;
+        padding: 40px 37px 50px 37px;
     }
 
 }
@@ -68,7 +68,7 @@
     }
 
     .pricing__plan-column {
-        padding: 50px 45px;
+        padding: 50px 42px;
     }
 
 }
@@ -111,6 +111,11 @@
 .pricing__plan-benefits-list,
 .pricing__benefits-list-item {
     margin-top: 20px;
+}
+
+.pricing__plan-benefits-list {
+    padding-left: 0;
+    margin-bottom: 60px;
 }
 
 .pricing__plan-heading .price {
@@ -176,8 +181,5 @@
     color: var(--text-color);
     line-height: 25.6px;
     margin-left: 10px;
-}
-
-.pricing__plan-button {
-    margin-top: 40px;
+    margin-bottom: 0;
 }
