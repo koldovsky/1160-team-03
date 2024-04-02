@@ -1,13 +1,20 @@
-.img-container1,
-.img-container2 {
+.photo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.img-container {
   position: relative;
-  margin: 0 10px; /* Змініть відстань між контейнерами за потребою */
+  margin: 10px;
+  width: 50%;
 }
 
 .container-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    text-align: center;
 }
