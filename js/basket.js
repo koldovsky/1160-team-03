@@ -25,6 +25,7 @@ export function addToCart(machine) {
     removeButton.textContent = 'Remove';
     removeButton.addEventListener('click', function() {
         removeFromCart(cartItem);
+        updateTotalPrice(); // Оновлюємо загальну ціну після видалення товару
     });
     cartItemDetails.appendChild(removeButton);
 
@@ -32,11 +33,31 @@ export function addToCart(machine) {
 
     const cartContainer = document.querySelector('.modal-body .container');
     cartContainer.appendChild(cartItem);
+
+    updateTotalPrice(); // Оновлюємо загальну ціну після додавання товару
 }
 
 // Функція для видалення товару з корзини
 function removeFromCart(cartItem) {
     cartItem.remove();
+}
+
+// Функція для оновлення загальної ціни
+function updateTotalPrice() {
+    const cartItems = document.querySelectorAll('.cart-item');
+    let totalPrice = 0;
+
+    cartItems.forEach(cartItem => {
+        const priceElement = cartItem.querySelector('.cart-item-details p');
+        const price = parseFloat(priceElement.textContent); // Перетворюємо ціну у число
+        const quantityInput = cartItem.querySelector('input[type="number"]');
+        const quantity = parseInt(quantityInput.value); // Отримуємо кількість товару
+
+        totalPrice += price * quantity; // Додаємо вартість товару до загальної ціни
+    });
+
+    const totalPriceElement = document.querySelector('.total-price');
+    totalPriceElement.textContent = 'Total Price: ' + totalPrice.toFixed(2); // Виводимо загальну ціну з двома знаками після коми
 }
 
 // Функція для оформлення замовлення
@@ -46,7 +67,8 @@ function checkout() {
 
     // Додавання загальної ціни
     const totalPrice = document.createElement('p');
-    totalPrice.textContent = 'Total Price: '; // Потрібно додати логіку для обчислення загальної ціни
+    totalPrice.classList.add('total-price'); // Додаємо клас для легшого доступу до елемента
+    totalPrice.textContent = 'Total Price: 0.00'; // Початкова загальна ціна
     cartContainer.appendChild(totalPrice);
 
     // Додавання форми для інформації про замовлення
