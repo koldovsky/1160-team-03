@@ -30,5 +30,11 @@ function renderCoffeeMachines(coffeeMachinesList) {
     const machinesContainer = document.querySelector('.coffee-machines__items-container');
     machinesContainer.innerHTML = machinesDomString;
 }
+const addToCartButtons = document.querySelectorAll('.coffee-machine__button');
+addToCartButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        addToCart(index);
+    });
+});
 
 fetchCoffeeMachines();
