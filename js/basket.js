@@ -1,6 +1,5 @@
 
-function addToCart(machineIndex) {
-    const machine = coffeeMachines[machineIndex];
+function addToCart(machine) {
     const cartItem = document.createElement('div');
     cartItem.classList.add('cart-item');
 
@@ -24,7 +23,7 @@ function addToCart(machineIndex) {
     removeButton.classList.add('btn', 'btn-danger', 'btn-sm');
     removeButton.textContent = 'Remove';
     removeButton.addEventListener('click', function() {
-        removeFromCart(machineIndex);
+        removeFromCart(cartItem);
     });
     cartItemDetails.appendChild(removeButton);
 
@@ -33,22 +32,20 @@ function addToCart(machineIndex) {
     const cartContainer = document.querySelector('.modal-body .container');
     cartContainer.appendChild(cartItem);
 }
-function removeFromCart(machineIndex) {
-    const cartContainer = document.querySelector('.modal-body .container');
-    const cartItems = cartContainer.querySelectorAll('.cart-item');
-    cartItems[machineIndex].remove();
+
+
+function removeFromCart(cartItem) {
+    cartItem.remove();
 }
+
 function checkout() {
+ 
     const cartContainer = document.querySelector('.modal-body .container');
-    cartContainer.innerHTML = ''; 
+    cartContainer.innerHTML = ''; // Очистити корзину
     alert('Your order has been placed successfully!');
 }
-const checkoutButton = document.querySelector('.modal-footer .btn-primary');
-checkoutButton.addEventListener('click', checkout);
 
-const addToCartButtons = document.querySelectorAll('.coffee-machine__button');
-addToCartButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        addToCart(index);
-    });
-});
+const checkoutButton = document.querySelector('.modal-footer .btn-primary');
+if (checkoutButton) {
+    checkoutButton.addEventListener('click', checkout);
+}

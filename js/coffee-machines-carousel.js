@@ -1,4 +1,4 @@
-// Функція для рендерингу списку кавоварок
+
 async function fetchCoffeeMachines() {
     try {
         const response = await fetch('api/machines.json');
