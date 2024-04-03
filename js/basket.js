@@ -25,4 +25,12 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Перемістити код для показу/приховування модального вікна поза цим файлом, оскільки він вже є в HTML-файлі.
+// Додати обробник події показу модального вікна корзини
+$('#cartModal').on('show.bs.modal', function () {
+    $('body').addClass('modal-open-noscroll');
+});
+
+// Додати обробник події приховування модального вікна корзини
+$('#cartModal').on('hidden.bs.modal', function () {
+    $('body').removeClass('modal-open-noscroll');
+});
