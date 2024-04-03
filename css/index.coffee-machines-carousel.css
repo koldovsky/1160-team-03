@@ -70,80 +70,10 @@
 .coffee-machines__button:hover {  
   background-color: var(--secondary-color);
 }    
-.coffee-machines__carousel {
-  position: relative;
-  margin-top: 45px;
-}
-
-.coffee-machines__carousel__button {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: none;
-  background-color: var(--arrow-icon-background);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-
-.coffee-machines__carousel__button::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 12px;
-  height: 12px;
-  background-image: url(../img/button-arrow.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: invert(17%) sepia(75%) saturate(4531%) hue-rotate(351deg) brightness(72%) contrast(112%);
-}
-
-.coffee-machines__carousel__button--left {
-  left: 0;
-  transform: translate(-50%, -50%) scaleX(-1);
-}
-
-.coffee-machines__carousel__button--right {
-  right: 0;
-  transform: translate(50%, -50%);
-}
-
-.coffee-machines__carousel-slides {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  overflow: hidden;
-  position: relative;
-}
-
-.coffee-machines__carousel-slide {
-  flex-shrink: 0;
-  width: 100%;
-  max-width: 250px;
-  text-align: center;
-}
-
 
 @media (min-width: 768px){
   .coffee-machines__first-titel{
       font-size: 40px;
   }
-  .coffee-machines__carousel__button {
-      width: 30px;
-      height: 30px;
-  }
-
-  .coffee-machines__carousel__button::after {
-      width: 30px;
-      height: 30px;
-      background-size: 30px;
-  }
-
-  .coffee-machines__carousel-slides {
-      gap: 30px;
-  }
+  
 }
