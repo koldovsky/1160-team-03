@@ -1,3 +1,4 @@
+// Функція для рендерингу списку кавоварок
 async function fetchCoffeeMachines() {
     try {
         const response = await fetch('api/machines.json');
@@ -13,7 +14,8 @@ async function fetchCoffeeMachines() {
 
 function renderCoffeeMachines(coffeeMachinesList) {
     let machinesDomString = ``;
-    for (const machine of coffeeMachinesList) {
+    for (let i = 0; i < coffeeMachinesList.length; i++) {
+        const machine = coffeeMachinesList[i];
         machinesDomString += `
             <div class="coffee-machine__item">
                 <a href="#">
@@ -21,7 +23,7 @@ function renderCoffeeMachines(coffeeMachinesList) {
                     <h6>${machine.title}</h6>
                 </a>
                 <p>${machine.price}</p>
-                <button class="coffee-machine__button">Add to Cart</button>
+                <button class="coffee-machine__button" data-index="${i}">Add to Cart</button>
             </div>
         `;
     }

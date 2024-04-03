@@ -1,5 +1,6 @@
 function init() {
     import('./header.js');
+    import('./basket.js');
     import('./hero.js');
     import('./brands-carousel.js');
     import('./coffee-machines-carousel.js');
