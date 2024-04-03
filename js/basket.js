@@ -1,54 +1,57 @@
-// Функція для додавання товару в корзину
-function addToCart(machine) {
-    const cartItemsContainer = document.querySelector('.modal-body .container');
-    const totalPriceElement = document.querySelector('.modal-footer .total-price');
-    const alertContainer = document.querySelector('.alert-container');
+// basket.js
 
-    // Додати товар в список корзини
-    const cartItem = document.createElement('div');
-    cartItem.classList.add('row', 'mb-2');
-    cartItem.innerHTML = `
-        <div class="col-8">${machine.title}</div>
-        <div class="col-4 text-right">${machine.price}</div>
-    `;
-    cartItemsContainer.appendChild(cartItem);
+// Масив для зберігання товарів у корзині
+let cart = [];
 
-    // Оновити загальну суму
-    const totalPrice = parseFloat(totalPriceElement.textContent) + parseFloat(machine.price);
-    totalPriceElement.textContent = totalPrice.toFixed(2);
-
-    // Відобразити вспливаюче повідомлення
-    const alert = document.createElement('div');
-    alert.classList.add('alert', 'alert-success', 'alert-dismissible', 'fade', 'show');
-    alert.setAttribute('role', 'alert');
-    alert.innerHTML = `
-        Товар <strong>${machine.title}</strong> успішно доданий до корзини!
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    `;
-    alertContainer.appendChild(alert);
-
-    // Прибрати повідомлення через деякий час
-    setTimeout(() => {
-        alert.remove();
-    }, 3000);
+// Функція для додавання товару у корзину
+function addToCart(machineIndex) {
+    const machine = coffeeMachines[machineIndex];
+    cart.push(machine);
+    updateCartUI();
 }
 
-// Додати обробник подій для кнопок "Add to Cart"
-document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('coffee-machine__button')) {
-        const machineIndex = event.target.dataset.index;
-        addToCart(coffeeMachinesList[machineIndex]);
-    }
-});
+// Функція для видалення товару з корзини за індексом
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCartUI();
+}
 
-// Додати обробник події показу модального вікна корзини
-$('#cartModal').on('show.bs.modal', function () {
-    $('body').addClass('modal-open-noscroll');
-});
+// Функція для оновлення відображення корзини на сторінці
+function updateCartUI() {
+    const cartContainer = document.querySelector('.modal-body .container');
+    let cartDomString = '';
+    cart.forEach((item, index) => {
+        cartDomString += `
+            <div class="cart-item">
+                <img src="${item.image}" alt="${item.title}" class="cart-item-img">
+                <div class="cart-item-details">
+                    <h6>${item.title}</h6>
+                    <p>${item.price}</p>
+                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Remove</button>
+                </div>
+            </div>
+        `;
+    });
+    cartContainer.innerHTML = cartDomString;
+}
 
-// Додати обробник події приховування модального вікна корзини
-$('#cartModal').on('hidden.bs.modal', function () {
-    $('body').removeClass('modal-open-noscroll');
+// Функція для обробки оформлення замовлення
+function checkout() {
+    // Тут можна додати логіку для оформлення замовлення, наприклад, відправка даних на сервер
+    // Після успішного оформлення можна очистити корзину і відобразити відповідне повідомлення
+    cart = [];
+    updateCartUI();
+    alert('Your order has been placed successfully!');
+}
+
+// Обробник події для кнопки "Оформити замовлення"
+const checkoutButton = document.querySelector('.modal-footer .btn-primary');
+checkoutButton.addEventListener('click', checkout);
+
+// Обробник події для кнопок "Add to Cart"
+const addToCartButtons = document.querySelectorAll('.coffee-machine__button');
+addToCartButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        addToCart(index);
+    });
 });
