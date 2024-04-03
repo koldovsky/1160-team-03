@@ -85,7 +85,6 @@
     width: 50px;
     height: 50px;
   }
-
 }
 @media (min-width: 768px) {
   .coffee__container-production {
@@ -139,21 +138,18 @@
   .coffee-production-watch-video {
     margin-left: 20px;
   }
-
 }
 
 @media (min-width: 1300px) {
   .coffee__title-production {
     font-size: 68px;
-    font-weight:800;
+    font-weight: 800;
     line-height: 56px;
     margin-top: 20px;
     margin-left: 20px;
     width: 700px;
-
   }
 }
-
 
 .coffee-production__under-container {
   display: flex;
@@ -222,13 +218,13 @@
   margin-top: 10px;
 }
 
-.coffee__learn-button:hover{
+.coffee__learn-button:hover {
   background-color: var(--banner-button-text-color);
   outline: 2px solid var(--banner-button-text-color);
   color: var(--header-burger-btn-color);
   transition: 0.3s;
 }
-.coffee__beans-button:hover{
+.coffee__beans-button:hover {
   background-color: var(--header-burger-btn-color);
   outline: 2px solid var(--header-burger-btn-color);
   color: var(--banner-button-text-color);
@@ -250,16 +246,16 @@
 @media (min-width: 770px) {
   .coffee-production__under-text-container {
     display: flex;
-flex-direction: row;
+    flex-direction: row;
   }
   .coffee-production-under-title-buttoms {
-flex-direction: column;
-justify-content: center;
-width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
   }
   .coffee-production__under-text-container {
     justify-content: space-between;
-align-items: center;
+    align-items: center;
   }
   .coffee__learn-button {
     margin-top: 20px;
@@ -273,9 +269,9 @@ align-items: center;
   .coffee-production-under-title-buttoms {
     flex-direction: row;
     margin-right: 10%;
-      }
-      .coffee__learn-button {
-        margin-top: 0;
-        margin-left: 20px;
-      }
+  }
+  .coffee__learn-button {
+    margin-top: 0;
+    margin-left: 20px;
+  }
 }
