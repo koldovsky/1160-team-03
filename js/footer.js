@@ -1,4 +1,4 @@
-/*const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('button');
 
 function count() {
   let counter = 0;
@@ -29,4 +29,4 @@ buttons.forEach(button => {
     this.textContent = counter();
   });
 });
-*/
+
