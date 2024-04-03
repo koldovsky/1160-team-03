@@ -2,6 +2,7 @@
 function addToCart(machine) {
     const cartItemsContainer = document.querySelector('.modal-body .container');
     const totalPriceElement = document.querySelector('.modal-footer .total-price');
+    const alertContainer = document.querySelector('.alert-container');
 
     // Додати товар в список корзини
     const cartItem = document.createElement('div');
@@ -15,6 +16,23 @@ function addToCart(machine) {
     // Оновити загальну суму
     const totalPrice = parseFloat(totalPriceElement.textContent) + parseFloat(machine.price);
     totalPriceElement.textContent = totalPrice.toFixed(2);
+
+    // Відобразити вспливаюче повідомлення
+    const alert = document.createElement('div');
+    alert.classList.add('alert', 'alert-success', 'alert-dismissible', 'fade', 'show');
+    alert.setAttribute('role', 'alert');
+    alert.innerHTML = `
+        Товар <strong>${machine.title}</strong> успішно доданий до корзини!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    `;
+    alertContainer.appendChild(alert);
+
+    // Прибрати повідомлення через деякий час
+    setTimeout(() => {
+        alert.remove();
+    }, 3000);
 }
 
 // Додати обробник подій для кнопок "Add to Cart"
