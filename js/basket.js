@@ -1,3 +1,5 @@
+export function addToCart(machineIndex) {
+    const machine = coffeeMachines[machineIndex];
 
 function addToCart(machine) {
     const cartItem = document.createElement('div');
@@ -48,4 +50,4 @@ function checkout() {
 const checkoutButton = document.querySelector('.modal-footer .btn-primary');
 if (checkoutButton) {
     checkoutButton.addEventListener('click', checkout);
-}
+}}

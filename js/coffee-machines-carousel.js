@@ -1,3 +1,4 @@
+import { addToCart } from './basket.js';
 
 async function fetchCoffeeMachines() {
     try {
@@ -7,6 +8,7 @@ async function fetchCoffeeMachines() {
         }
         const coffeeMachines = await response.json();
         renderCoffeeMachines(coffeeMachines);
+        initAddToCartButtons();
     } catch (error) {
         console.error('Error fetching coffee machines:', error);
     }
@@ -30,11 +32,14 @@ function renderCoffeeMachines(coffeeMachinesList) {
     const machinesContainer = document.querySelector('.coffee-machines__items-container');
     machinesContainer.innerHTML = machinesDomString;
 }
-const addToCartButtons = document.querySelectorAll('.coffee-machine__button');
-addToCartButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        addToCart(index);
+
+function initAddToCartButtons() {
+    const addToCartButtons = document.querySelectorAll('.coffee-machine__button');
+    addToCartButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            addToCart(index);
+        });
     });
-});
+}
 
 fetchCoffeeMachines();
