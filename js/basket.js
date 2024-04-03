@@ -1,7 +1,5 @@
-export function addToCart(machineIndex) {
-    const machine = coffeeMachines[machineIndex];
-
-function addToCart(machine) {
+// Функція для додавання товару у корзину
+export function addToCart(machine) {
     const cartItem = document.createElement('div');
     cartItem.classList.add('cart-item');
 
@@ -35,19 +33,20 @@ function addToCart(machine) {
     cartContainer.appendChild(cartItem);
 }
 
-
+// Функція для видалення товару з корзини
 function removeFromCart(cartItem) {
     cartItem.remove();
 }
 
+// Функція для оформлення замовлення
 function checkout() {
- 
     const cartContainer = document.querySelector('.modal-body .container');
-    cartContainer.innerHTML = ''; // Очистити корзину
+    cartContainer.innerHTML = ''; // Очищення корзини
     alert('Your order has been placed successfully!');
 }
 
+// Додавання обробника події для кнопки "Оформити замовлення"
 const checkoutButton = document.querySelector('.modal-footer .btn-primary');
 if (checkoutButton) {
     checkoutButton.addEventListener('click', checkout);
-}}
+}
