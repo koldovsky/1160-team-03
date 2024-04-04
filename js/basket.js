@@ -1,4 +1,3 @@
-
 export function addToCart(machine) {
     const cartItemTitles = document.querySelectorAll('.cart-item h6');
     let itemExists = false;
@@ -156,17 +155,12 @@ function addCustomerInfoForm() {
 
     const cartContainer = document.querySelector('.modal-body .container');
     cartContainer.appendChild(customerInfoForm);
-}
 
-// Викликаємо функцію для додавання форми
-addCustomerInfoForm();
-
-// Очищаємо корзину
-function clearCart() {
-    const cartItems = document.querySelectorAll('.cart-item');
-    cartItems.forEach(cartItem => {
-        cartItem.remove();
+    // Переназначаємо кнопки
+    const closeButton = document.querySelector('.btn-close');
+    closeButton.addEventListener('click', function() {
+        // Закрити модальне вікно
+        const modal = document.querySelector('.modal');
+        modal.style.display = 'none';
     });
-
-    updateTotalPrice(); // Оновлюємо загальну ціну після очищення корзини
 }
