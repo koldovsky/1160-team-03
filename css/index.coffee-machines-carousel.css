@@ -21,19 +21,22 @@
 }
 
 .coffee-machines__img {
-  width: 248px;
+  width: 100%; 
+  max-width: 300px;
 }
 
 .coffee-machines__items-container {
   display: flex;
+  flex-wrap: wrap; 
   justify-content: center;
 }
 
 .coffee-machine__item {
-  width: 250px;
+  width: 90%; 
+  max-width: 300px;
   font-family: var(--font-family-secondary);
-  font-size: 24px;
-  margin: 20px;
+  font-size: 18px;
+  margin: 20px auto; 
 }
 
 .coffee-machine__item a {
@@ -42,9 +45,9 @@
 
 .coffee-machine__item h6 {
   color: var(--secondary-color);
-  font-size: 20px;
+  font-size: 16px; 
   font-weight: 400;
-  margin-top: 24px;
+  margin-top: 16px; 
 }
 
 .coffee-machine__item p {
@@ -56,12 +59,12 @@
   background-color: var(--primary-color);
   border: none;
   color: var(--hero-text-color);
-  padding: 16px 32px;
+  padding: 12px 24px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 14px; 
+  margin: 8px 0; 
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 2px;
@@ -70,80 +73,30 @@
 .coffee-machines__button:hover {  
   background-color: var(--secondary-color);
 }    
-.coffee-machines__carousel {
-  position: relative;
-  margin-top: 45px;
-}
 
-.coffee-machines__carousel__button {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: none;
-  background-color: var(--arrow-icon-background);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
+@media (min-width: 768px) {
 
-.coffee-machines__carousel__button::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 12px;
-  height: 12px;
-  background-image: url(../img/button-arrow.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: invert(17%) sepia(75%) saturate(4531%) hue-rotate(351deg) brightness(72%) contrast(112%);
-}
-
-.coffee-machines__carousel__button--left {
-  left: 0;
-  transform: translate(-50%, -50%) scaleX(-1);
-}
-
-.coffee-machines__carousel__button--right {
-  right: 0;
-  transform: translate(50%, -50%);
-}
-
-.coffee-machines__carousel-slides {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  overflow: hidden;
-  position: relative;
-}
-
-.coffee-machines__carousel-slide {
-  flex-shrink: 0;
-  width: 100%;
-  max-width: 250px;
-  text-align: center;
-}
-
-
-@media (min-width: 768px){
-  .coffee-machines__first-titel{
-      font-size: 40px;
+  .coffee-machines__first-titel {
+    font-size: 40px;
   }
-  .coffee-machines__carousel__button {
-      width: 30px;
-      height: 30px;
+  
+  .coffee-machines__img {
+    width: 248px;
   }
 
-  .coffee-machines__carousel__button::after {
-      width: 30px;
-      height: 30px;
-      background-size: 30px;
+  .coffee-machine__item {
+    width: 250px;
+    font-size: 24px;
+    margin: 20px;
   }
 
-  .coffee-machines__carousel-slides {
-      gap: 30px;
+  .coffee-machine__item h6 {
+    font-size: 20px;
+    margin-top: 24px;
+  }
+
+  .coffee-machine__button {
+    font-size: 16px;
+    margin: 4px 2px;
   }
 }
