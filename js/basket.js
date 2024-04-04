@@ -60,16 +60,9 @@ function updateTotalPrice() {
     totalPriceElement.textContent = 'Total Price: ' + totalPrice.toFixed(2); // Виводимо загальну ціну з двома знаками після коми
 }
 
-// Функція для оформлення замовлення
 function checkout() {
     const cartContainer = document.querySelector('.modal-body .container');
     cartContainer.innerHTML = ''; // Очищення корзини
-
-    // Додавання загальної ціни
-    const totalPrice = document.createElement('p');
-    totalPrice.classList.add('total-price'); // Додаємо клас для легшого доступу до елемента
-    totalPrice.textContent = 'Total Price: 0.00'; // Початкова загальна ціна
-    cartContainer.appendChild(totalPrice);
 
     // Додавання форми для інформації про замовлення
     const orderForm = document.createElement('form');
@@ -83,6 +76,8 @@ function checkout() {
     nameInput.type = 'text';
     nameInput.name = 'name';
     orderForm.appendChild(nameInput);
+    
+    orderForm.appendChild(document.createElement('br')); // Додаємо абзаци після Name
 
     const surnameLabel = document.createElement('label');
     surnameLabel.textContent = 'Surname:';
@@ -93,6 +88,8 @@ function checkout() {
     surnameInput.name = 'surname';
     orderForm.appendChild(surnameInput);
 
+    orderForm.appendChild(document.createElement('br')); // Додаємо абзаци після Surname
+
     const phoneLabel = document.createElement('label');
     phoneLabel.textContent = 'Phone:';
     orderForm.appendChild(phoneLabel);
@@ -102,16 +99,12 @@ function checkout() {
     phoneInput.name = 'phone';
     orderForm.appendChild(phoneInput);
 
+    orderForm.appendChild(document.createElement('br')); // Додаємо абзаци після Phone
+
     const submitButton = document.createElement('button');
     submitButton.type = 'submit';
     submitButton.textContent = 'Place Order';
     orderForm.appendChild(submitButton);
 
     cartContainer.appendChild(orderForm);
-}
-
-// Додавання обробника події для кнопки "Оформити замовлення"
-const checkoutButton = document.querySelector('.modal-footer .btn-primary');
-if (checkoutButton) {
-    checkoutButton.addEventListener('click', checkout);
 }
