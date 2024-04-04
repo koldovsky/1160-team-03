@@ -116,6 +116,7 @@ function submitOrder(event) {
 }
 
 // Додаємо форму для вводу інформації покупця
+// Додаємо форму для вводу інформації покупця
 function addCustomerInfoForm() {
     const customerInfoForm = document.createElement('form');
     customerInfoForm.id = 'customer-info-form';
@@ -150,7 +151,8 @@ function addCustomerInfoForm() {
 
     const submitButton = document.createElement('button');
     submitButton.type = 'submit';
-    submitButton.textContent = 'Замовити';
+    submitButton.textContent = 'Оформити замовлення'; // Змінено текст кнопки
+    submitButton.classList.add('btn', 'btn-primary', 'btn-order'); // Додано клас btn-order
     customerInfoForm.appendChild(submitButton);
 
     const cartContainer = document.querySelector('.modal-body .container');
