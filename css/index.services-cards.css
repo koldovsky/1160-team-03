@@ -58,17 +58,16 @@
     }
 }
 
-.services-cards__card-items .services-cards__card-item
-{
+.services-cards__card-item {
     margin: calc(30px/4);
-}
-
-.services-cards__card-items .services-cards__card-item{
     display: flex;
     justify-content: center;
+    padding: 12px;
+    width: 50px;
+    height: 50px;
 }
 
-.services-cards__card-items .services-cards__card-item:not(:first-child){
+.services-cards__card-item:not(:first-child) {
     flex-direction: column;
     min-width: 40%;
     flex: 1;
@@ -76,8 +75,7 @@
 
 .services-cards__affordability-title,
 .services-cards__delivery-title,
-.services-cards__waranty-title
-{
+.services-cards__waranty-title {
     font-family: var(--font-family-primary);
     font-weight: 600;
     font-size: 22px;
@@ -86,18 +84,11 @@
 
 .services-cards__waranty-text,
 .services-cards__delivery-text,
-.services-cards__affordability-text
-{
+.services-cards__affordability-text {
     word-wrap: break-word;
     font-family: var(--font-family-secondary);
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
     color: var(--text-color);
-}
-
-.services-cards__card-item{
-    padding: 12px;
-    width: 50px;
-    height: 50px;
 }
