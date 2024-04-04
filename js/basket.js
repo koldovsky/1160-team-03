@@ -109,6 +109,8 @@ function addCustomerInfoForm() {
     customerInfoForm.id = 'customer-info-form';
     customerInfoForm.addEventListener('submit', submitOrder);
 
+    customerInfoForm.appendChild(document.createElement('br'));
+
     const nameLabel = document.createElement('label');
     nameLabel.for = 'name';
     nameLabel.textContent = 'Ім\'я:';
@@ -118,6 +120,8 @@ function addCustomerInfoForm() {
     nameLabel.appendChild(nameInput);
     customerInfoForm.appendChild(nameLabel);
 
+    customerInfoForm.appendChild(document.createElement('br'));
+
     const lastNameLabel = document.createElement('label');
     lastNameLabel.for = 'last-name';
     lastNameLabel.textContent = 'Прізвище:';
@@ -126,6 +130,8 @@ function addCustomerInfoForm() {
     lastNameInput.id = 'last-name';
     lastNameLabel.appendChild(lastNameInput);
     customerInfoForm.appendChild(lastNameLabel);
+
+    customerInfoForm.appendChild(document.createElement('br'));
 
     const phoneLabel = document.createElement('label');
     phoneLabel.for = 'phone';
