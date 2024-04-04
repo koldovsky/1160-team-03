@@ -38,8 +38,16 @@ function initAddToCartButtons(coffeeMachines) { // Додаємо парамет
     addToCartButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
             addToCart(coffeeMachines[index]); // Передаємо об'єкт кавоварки
+            displayAddedToCartMessage(coffeeMachines[index].title); // Виводимо повідомлення про додання товару
         });
     });
+}
+
+function displayAddedToCartMessage(itemTitle) {
+    const message = `Товар "${itemTitle}" успішно додано до корзини.`;
+    setTimeout(() => {
+        alert(message); // Виводимо повідомлення за допомогою вбудованої функції alert
+    }, 5000); // Таймер на 5 секунд (5000 мілісекунд)
 }
 
 fetchCoffeeMachines();
