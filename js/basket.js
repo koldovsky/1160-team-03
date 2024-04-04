@@ -116,14 +116,14 @@ function submitOrder(event) {
 }
 
 // Додаємо форму для вводу інформації покупця
-// Додаємо форму для вводу інформації покупця
 function addCustomerInfoForm() {
+    const cartContainer = document.querySelector('.modal-body .container');
+
     const customerInfoForm = document.createElement('form');
     customerInfoForm.id = 'customer-info-form';
     customerInfoForm.addEventListener('submit', submitOrder); // Додаємо обробник подачі форми
 
     const nameLabel = document.createElement('label');
-    nameLabel.for = 'name';
     nameLabel.textContent = 'Ім\'я:';
     const nameInput = document.createElement('input');
     nameInput.type = 'text';
@@ -132,7 +132,6 @@ function addCustomerInfoForm() {
     customerInfoForm.appendChild(nameLabel);
 
     const lastNameLabel = document.createElement('label');
-    lastNameLabel.for = 'last-name';
     lastNameLabel.textContent = 'Прізвище:';
     const lastNameInput = document.createElement('input');
     lastNameInput.type = 'text';
@@ -141,7 +140,6 @@ function addCustomerInfoForm() {
     customerInfoForm.appendChild(lastNameLabel);
 
     const phoneLabel = document.createElement('label');
-    phoneLabel.for = 'phone';
     phoneLabel.textContent = 'Номер телефону:';
     const phoneInput = document.createElement('input');
     phoneInput.type = 'tel';
@@ -155,7 +153,6 @@ function addCustomerInfoForm() {
     submitButton.classList.add('btn', 'btn-primary', 'btn-order'); // Додано клас btn-order
     customerInfoForm.appendChild(submitButton);
 
-    const cartContainer = document.querySelector('.modal-body .container');
     cartContainer.appendChild(customerInfoForm);
 
     // Переназначаємо кнопки
