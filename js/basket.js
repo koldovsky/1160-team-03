@@ -1,7 +1,7 @@
 // basket.js
 export function addToCart(machine) {
     const existingCartItem = document.querySelector('.cart-item h6');
-    
+
     if (existingCartItem && existingCartItem.textContent === machine.title) {
         const quantityInput = existingCartItem.parentElement.querySelector('input[type="number"]');
         const currentQuantity = parseInt(quantityInput.value);
@@ -69,10 +69,51 @@ export function updateTotalPrice() {
     totalPriceElement.textContent = 'Total Price: ' + totalPrice.toFixed(2); // Виводимо загальну ціну з двома знаками після коми
 }
 
+// Функція для виведення повідомлення
+export function showAlert(message) {
+    const alertMessage = document.createElement('div');
+    alertMessage.classList.add('alert', 'alert-success');
+    alertMessage.textContent = message;
+
+    const cartContainer = document.querySelector('.modal-body .container');
+    cartContainer.insertBefore(alertMessage, cartContainer.firstChild);
+
+    // Через 3 секунди прибираємо повідомлення
+    setTimeout(function() {
+        alertMessage.remove();
+    }, 3000);
+}
+
+// Функція для відправки замовлення
+function submitOrder(event) {
+    event.preventDefault(); // Зупиняємо стандартну дію подачі форми
+
+    const nameInput = document.getElementById('name');
+    const lastNameInput = document.getElementById('last-name');
+    const phoneInput = document.getElementById('phone');
+
+    const name = nameInput.value.trim(); // Отримуємо значення з поля імені та видаляємо зайві пробіли
+    const lastName = lastNameInput.value.trim(); // Отримуємо значення з поля прізвища та видаляємо зайві пробіли
+    const phone = phoneInput.value.trim(); // Отримуємо значення з поля номера телефону та видаляємо зайві пробіли
+
+    if (name === '' || lastName === '' || phone === '') {
+        alert('Будь ласка, заповніть усі поля.'); // Виводимо повідомлення про те, що усі поля мають бути заповненими
+        return; // Перериваємо відправку форми, якщо хоча б одне поле порожнє
+    }
+
+    // Якщо всі поля заповнені, можна відправити замовлення на сервер або виконати інші необхідні дії
+    // Наприклад, ви можете зібрати дані з корзини, інформацію про покупця та відправити замовлення на сервер
+    // Або здійснити інші необхідні дії, які ви хочете виконати при оформленні замовлення
+
+    // Наприклад, очистити корзину після успішного замовлення:
+    clearCart();
+}
+
 // Додаємо форму для вводу інформації покупця
 function addCustomerInfoForm() {
     const customerInfoForm = document.createElement('form');
     customerInfoForm.id = 'customer-info-form';
+    customerInfoForm.addEventListener('submit', submitOrder); // Додаємо обробник подачі форми
 
     const nameLabel = document.createElement('label');
     nameLabel.for = 'name';
@@ -110,4 +151,15 @@ function addCustomerInfoForm() {
     cartContainer.appendChild(customerInfoForm);
 }
 
-addCustomerInfoForm(); // Викликаємо функцію для додавання форми
+// Викликаємо функцію для додавання форми
+addCustomerInfoForm();
+
+// Очищаємо корзину
+function clearCart() {
+    const cartItems = document.querySelectorAll('.cart-item');
+    cartItems.forEach(cartItem => {
+        cartItem.remove();
+    });
+
+    updateTotalPrice(); // Оновлюємо загальну ціну після очищення корзини
+}
