@@ -107,7 +107,6 @@ function submitOrder(event) {
 function addCustomerInfoForm() {
     const customerInfoForm = document.createElement('form');
     customerInfoForm.id = 'customer-info-form';
-    customerInfoForm.addEventListener('submit', submitOrder);
 
     const nameLabel = document.createElement('label');
     nameLabel.for = 'name';
@@ -136,10 +135,15 @@ function addCustomerInfoForm() {
     phoneLabel.appendChild(phoneInput);
     customerInfoForm.appendChild(phoneLabel);
 
-    const submitButton = document.createElement('button');
-    submitButton.type = 'submit';
-    submitButton.textContent = 'Замовити';
-    customerInfoForm.appendChild(submitButton);
+    customerInfoForm.appendChild(document.createElement('br'));
+
+    const existingButton = document.querySelector('.btn-order');
+    existingButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        submitOrder();
+    });
+
+    customerInfoForm.appendChild(existingButton);
 
     const cartContainer = document.querySelector('.modal-body .container');
     cartContainer.appendChild(customerInfoForm);
