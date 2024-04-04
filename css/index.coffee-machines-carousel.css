@@ -21,22 +21,22 @@
 }
 
 .coffee-machines__img {
-  width: 100%; /* Adjust according to design */
-  max-width: 300px; /* Adjust according to design */
+  width: 100%; 
+  max-width: 300px;
 }
 
 .coffee-machines__items-container {
   display: flex;
-  flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+  flex-wrap: wrap; 
   justify-content: center;
 }
 
 .coffee-machine__item {
-  width: 90%; /* Adjust according to design */
-  max-width: 300px; /* Adjust according to design */
+  width: 90%; 
+  max-width: 300px;
   font-family: var(--font-family-secondary);
   font-size: 18px;
-  margin: 20px auto; /* Centering items */
+  margin: 20px auto; 
 }
 
 .coffee-machine__item a {
@@ -45,9 +45,9 @@
 
 .coffee-machine__item h6 {
   color: var(--secondary-color);
-  font-size: 16px; /* Adjust according to design */
+  font-size: 16px; 
   font-weight: 400;
-  margin-top: 16px; /* Adjust according to design */
+  margin-top: 16px; 
 }
 
 .coffee-machine__item p {
@@ -63,8 +63,8 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px; /* Adjust according to design */
-  margin: 8px 0; /* Adjust according to design */
+  font-size: 14px; 
+  margin: 8px 0; 
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 2px;
@@ -75,13 +75,13 @@
 }    
 
 @media (min-width: 768px) {
-  /* Styles for tablets and larger screens */
+
   .coffee-machines__first-titel {
     font-size: 40px;
   }
   
   .coffee-machines__img {
-    width: 248px; /* Adjust according to design */
+    width: 248px;
   }
 
   .coffee-machine__item {

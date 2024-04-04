@@ -8,7 +8,7 @@ async function fetchCoffeeMachines() {
         }
         const coffeeMachines = await response.json();
         renderCoffeeMachines(coffeeMachines);
-        initAddToCartButtons(coffeeMachines); // Передаємо дані про кавоварки у функцію
+        initAddToCartButtons(coffeeMachines); 
     } catch (error) {
         console.error('Error fetching coffee machines:', error);
     }
@@ -33,11 +33,11 @@ function renderCoffeeMachines(coffeeMachinesList) {
     machinesContainer.innerHTML = machinesDomString;
 }
 
-function initAddToCartButtons(coffeeMachines) { // Додаємо параметр coffeeMachines
+function initAddToCartButtons(coffeeMachines) { 
     const addToCartButtons = document.querySelectorAll('.coffee-machine__button');
     addToCartButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
-            addToCart(coffeeMachines[index]); // Передаємо об'єкт кавоварки
+            addToCart(coffeeMachines[index]); 
         });
     });
 }

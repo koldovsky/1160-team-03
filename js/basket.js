@@ -12,7 +12,6 @@ export function addToCart(machine) {
     });
 
     if (!itemExists) {
-        // Додати новий товар у кошик
         const cartItem = document.createElement('div');
         cartItem.classList.add('cart-item');
 
@@ -30,7 +29,7 @@ export function addToCart(machine) {
         const quantityInput = document.createElement('input');
         quantityInput.type = 'number';
         quantityInput.min = '1';
-        quantityInput.value = '1'; // Початкова кількість товару
+        quantityInput.value = '1';
         cartItemDetails.appendChild(quantityInput);
 
         const removeButton = document.createElement('button');
@@ -38,7 +37,7 @@ export function addToCart(machine) {
         removeButton.textContent = 'Remove';
         removeButton.addEventListener('click', function() {
             removeFromCart(cartItem);
-            updateTotalPrice(); // Оновлюємо загальну ціну після видалення товару
+            updateTotalPrice();
         });
         cartItemDetails.appendChild(removeButton);
 
@@ -48,34 +47,31 @@ export function addToCart(machine) {
         cartContainer.appendChild(cartItem);
     }
 
-    updateTotalPrice(); // Оновлюємо загальну ціну після додавання товару
+    updateTotalPrice();
 }
 
-// Функція для видалення товару з корзини
 export function removeFromCart(cartItem) {
     cartItem.remove();
-    updateTotalPrice(); // Оновлюємо загальну ціну після видалення товару
+    updateTotalPrice();
 }
 
-// Функція для оновлення загальної ціни
 export function updateTotalPrice() {
     const cartItems = document.querySelectorAll('.cart-item');
     let totalPrice = 0;
 
     cartItems.forEach(cartItem => {
         const priceElement = cartItem.querySelector('.cart-item-details p');
-        const price = parseFloat(priceElement.textContent); // Перетворюємо ціну у число
+        const price = parseFloat(priceElement.textContent);
         const quantityInput = cartItem.querySelector('input[type="number"]');
-        const quantity = parseInt(quantityInput.value); // Отримуємо кількість товару
+        const quantity = parseInt(quantityInput.value);
 
-        totalPrice += price * quantity; // Додаємо вартість товару до загальної ціни
+        totalPrice += price * quantity;
     });
 
     const totalPriceElement = document.querySelector('.total-price');
-    totalPriceElement.textContent = 'Total Price: ' + totalPrice.toFixed(2); // Виводимо загальну ціну з двома знаками після коми
+    totalPriceElement.textContent = 'Total Price: ' + totalPrice.toFixed(2);
 }
 
-// Функція для виведення повідомлення
 export function showAlert(message) {
     const alertMessage = document.createElement('div');
     alertMessage.classList.add('alert', 'alert-success');
@@ -84,46 +80,37 @@ export function showAlert(message) {
     const cartContainer = document.querySelector('.modal-body .container');
     cartContainer.insertBefore(alertMessage, cartContainer.firstChild);
 
-    // Через 3 секунди прибираємо повідомлення
     setTimeout(function() {
         alertMessage.remove();
     }, 3000);
 }
 
-// Функція для відправки замовлення
 function submitOrder(event) {
-    event.preventDefault(); // Зупиняємо стандартну дію подачі форми
+    event.preventDefault();
 
     const nameInput = document.getElementById('name');
     const lastNameInput = document.getElementById('last-name');
     const phoneInput = document.getElementById('phone');
 
-    const name = nameInput.value.trim(); // Отримуємо значення з поля імені та видаляємо зайві пробіли
-    const lastName = lastNameInput.value.trim(); // Отримуємо значення з поля прізвища та видаляємо зайві пробіли
-    const phone = phoneInput.value.trim(); // Отримуємо значення з поля номера телефону та видаляємо зайві пробіли
+    const name = nameInput.value.trim();
+    const lastName = lastNameInput.value.trim();
+    const phone = phoneInput.value.trim();
 
     if (name === '' || lastName === '' || phone === '') {
-        alert('Будь ласка, заповніть усі поля.'); // Виводимо повідомлення про те, що усі поля мають бути заповненими
-        return; // Перериваємо відправку форми, якщо хоча б одне поле порожнє
+        alert('Будь ласка, заповніть усі поля.');
+        return;
     }
 
-    // Якщо всі поля заповнені, можна відправити замовлення на сервер або виконати інші необхідні дії
-    // Наприклад, ви можете зібрати дані з корзини, інформацію про покупця та відправити замовлення на сервер
-    // Або здійснити інші необхідні дії, які ви хочете виконати при оформленні замовлення
-
-    // Наприклад, очистити корзину після успішного замовлення:
     clearCart();
 }
 
-// Додаємо форму для вводу інформації покупця
 function addCustomerInfoForm() {
-    const cartContainer = document.querySelector('.modal-body .container');
-
     const customerInfoForm = document.createElement('form');
     customerInfoForm.id = 'customer-info-form';
-    customerInfoForm.addEventListener('submit', submitOrder); // Додаємо обробник подачі форми
+    customerInfoForm.addEventListener('submit', submitOrder);
 
     const nameLabel = document.createElement('label');
+    nameLabel.for = 'name';
     nameLabel.textContent = 'Ім\'я:';
     const nameInput = document.createElement('input');
     nameInput.type = 'text';
@@ -132,6 +119,7 @@ function addCustomerInfoForm() {
     customerInfoForm.appendChild(nameLabel);
 
     const lastNameLabel = document.createElement('label');
+    lastNameLabel.for = 'last-name';
     lastNameLabel.textContent = 'Прізвище:';
     const lastNameInput = document.createElement('input');
     lastNameInput.type = 'text';
@@ -140,6 +128,7 @@ function addCustomerInfoForm() {
     customerInfoForm.appendChild(lastNameLabel);
 
     const phoneLabel = document.createElement('label');
+    phoneLabel.for = 'phone';
     phoneLabel.textContent = 'Номер телефону:';
     const phoneInput = document.createElement('input');
     phoneInput.type = 'tel';
@@ -149,17 +138,20 @@ function addCustomerInfoForm() {
 
     const submitButton = document.createElement('button');
     submitButton.type = 'submit';
-    submitButton.textContent = 'Оформити замовлення'; // Змінено текст кнопки
-    submitButton.classList.add('btn', 'btn-primary', 'btn-order'); // Додано клас btn-order
+    submitButton.textContent = 'Замовити';
     customerInfoForm.appendChild(submitButton);
 
+    const cartContainer = document.querySelector('.modal-body .container');
     cartContainer.appendChild(customerInfoForm);
+}
 
-    // Переназначаємо кнопки
-    const closeButton = document.querySelector('.btn-close');
-    closeButton.addEventListener('click', function() {
-        // Закрити модальне вікно
-        const modal = document.querySelector('.modal');
-        modal.style.display = 'none';
+addCustomerInfoForm();
+
+function clearCart() {
+    const cartItems = document.querySelectorAll('.cart-item');
+    cartItems.forEach(cartItem => {
+        cartItem.remove();
     });
+
+    updateTotalPrice();
 }
