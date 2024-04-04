@@ -1,4 +1,3 @@
-// Функція для додавання товару у корзину
 export function addToCart(machine) {
     const cartItem = document.createElement('div');
     cartItem.classList.add('cart-item');
@@ -17,7 +16,7 @@ export function addToCart(machine) {
     const quantityInput = document.createElement('input');
     quantityInput.type = 'number';
     quantityInput.min = '1';
-    quantityInput.value = '1'; // Початкова кількість товару
+    quantityInput.value = '1';
     cartItemDetails.appendChild(quantityInput);
 
     const removeButton = document.createElement('button');
@@ -25,7 +24,7 @@ export function addToCart(machine) {
     removeButton.textContent = 'Remove';
     removeButton.addEventListener('click', function() {
         removeFromCart(cartItem);
-        updateTotalPrice(); // Оновлюємо загальну ціну після видалення товару
+        updateTotalPrice();
     });
     cartItemDetails.appendChild(removeButton);
 
@@ -34,39 +33,35 @@ export function addToCart(machine) {
     const cartContainer = document.querySelector('.modal-body .container');
     cartContainer.appendChild(cartItem);
 
-    updateTotalPrice(); // Оновлюємо загальну ціну після додавання товару
+    updateTotalPrice();
 }
 
-// Функція для видалення товару з корзини
 function removeFromCart(cartItem) {
     cartItem.remove();
-    updateTotalPrice(); // Оновлюємо загальну ціну після видалення товару
+    updateTotalPrice();
 }
 
-// Функція для оновлення загальної ціни
 function updateTotalPrice() {
     const cartItems = document.querySelectorAll('.cart-item');
     let totalPrice = 0;
 
     cartItems.forEach(cartItem => {
         const priceElement = cartItem.querySelector('.cart-item-details p');
-        const price = parseFloat(priceElement.textContent); // Перетворюємо ціну у число
+        const price = parseFloat(priceElement.textContent);
         const quantityInput = cartItem.querySelector('input[type="number"]');
-        const quantity = parseInt(quantityInput.value); // Отримуємо кількість товару
+        const quantity = parseInt(quantityInput.value);
 
-        totalPrice += price * quantity; // Додаємо вартість товару до загальної ціни
+        totalPrice += price * quantity;
     });
 
     const totalPriceElement = document.querySelector('.total-price');
-    totalPriceElement.textContent = 'Total Price: ' + totalPrice.toFixed(2); // Виводимо загальну ціну з двома знаками після коми
+    totalPriceElement.textContent = 'Total Price: ' + totalPrice.toFixed(2);
 }
 
-// Функція для оформлення замовлення
 function checkout() {
     const cartContainer = document.querySelector('.modal-body .container');
-    cartContainer.innerHTML = ''; // Очищення корзини
+    cartContainer.innerHTML = '';
 
-    // Додавання форми для інформації про замовлення
     const orderForm = document.createElement('form');
     orderForm.classList.add('order-form');
 
@@ -78,8 +73,8 @@ function checkout() {
     nameInput.type = 'text';
     nameInput.name = 'name';
     orderForm.appendChild(nameInput);
-    
-    orderForm.appendChild(document.createElement('br')); // Додаємо абзаци після Name
+
+    orderForm.appendChild(document.createElement('br'));
 
     const surnameLabel = document.createElement('label');
     surnameLabel.textContent = 'Surname:';
@@ -90,7 +85,7 @@ function checkout() {
     surnameInput.name = 'surname';
     orderForm.appendChild(surnameInput);
 
-    orderForm.appendChild(document.createElement('br')); // Додаємо абзаци після Surname
+    orderForm.appendChild(document.createElement('br'));
 
     const phoneLabel = document.createElement('label');
     phoneLabel.textContent = 'Phone:';
@@ -101,7 +96,7 @@ function checkout() {
     phoneInput.name = 'phone';
     orderForm.appendChild(phoneInput);
 
-    orderForm.appendChild(document.createElement('br')); // Додаємо абзаци після Phone
+    orderForm.appendChild(document.createElement('br'));
 
     const submitButton = document.createElement('button');
     submitButton.type = 'submit';
@@ -111,5 +106,4 @@ function checkout() {
     cartContainer.appendChild(orderForm);
 }
 
-// Додавання обробника події для кнопки "Оформити замовлення"
 document.querySelector('.modal-footer .btn-primary').addEventListener('click', checkout);
