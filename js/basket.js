@@ -1,109 +1,113 @@
+// basket.js
 export function addToCart(machine) {
-    const cartItem = document.createElement('div');
-    cartItem.classList.add('cart-item');
+    const existingCartItem = document.querySelector('.cart-item h6');
+    
+    if (existingCartItem && existingCartItem.textContent === machine.title) {
+        const quantityInput = existingCartItem.parentElement.querySelector('input[type="number"]');
+        const currentQuantity = parseInt(quantityInput.value);
+        quantityInput.value = currentQuantity + 1;
+    } else {
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
 
-    const cartItemDetails = document.createElement('div');
-    cartItemDetails.classList.add('cart-item-details');
+        const cartItemDetails = document.createElement('div');
+        cartItemDetails.classList.add('cart-item-details');
 
-    const cartItemTitle = document.createElement('h6');
-    cartItemTitle.textContent = machine.title;
-    cartItemDetails.appendChild(cartItemTitle);
+        const cartItemTitle = document.createElement('h6');
+        cartItemTitle.textContent = machine.title;
+        cartItemDetails.appendChild(cartItemTitle);
 
-    const cartItemPrice = document.createElement('p');
-    cartItemPrice.textContent = machine.price;
-    cartItemDetails.appendChild(cartItemPrice);
+        const cartItemPrice = document.createElement('p');
+        cartItemPrice.textContent = machine.price;
+        cartItemDetails.appendChild(cartItemPrice);
 
-    const quantityInput = document.createElement('input');
-    quantityInput.type = 'number';
-    quantityInput.min = '1';
-    quantityInput.value = '1';
-    cartItemDetails.appendChild(quantityInput);
+        const quantityInput = document.createElement('input');
+        quantityInput.type = 'number';
+        quantityInput.min = '1';
+        quantityInput.value = '1'; // Початкова кількість товару
+        cartItemDetails.appendChild(quantityInput);
 
-    const removeButton = document.createElement('button');
-    removeButton.classList.add('btn', 'btn-danger', 'btn-sm');
-    removeButton.textContent = 'Remove';
-    removeButton.addEventListener('click', function() {
-        removeFromCart(cartItem);
-        updateTotalPrice();
-    });
-    cartItemDetails.appendChild(removeButton);
+        const removeButton = document.createElement('button');
+        removeButton.classList.add('btn', 'btn-danger', 'btn-sm');
+        removeButton.textContent = 'Remove';
+        removeButton.addEventListener('click', function() {
+            removeFromCart(cartItem);
+            updateTotalPrice(); // Оновлюємо загальну ціну після видалення товару
+        });
+        cartItemDetails.appendChild(removeButton);
 
-    cartItem.appendChild(cartItemDetails);
+        cartItem.appendChild(cartItemDetails);
 
-    const cartContainer = document.querySelector('.modal-body .container');
-    cartContainer.appendChild(cartItem);
+        const cartContainer = document.querySelector('.modal-body .container');
+        cartContainer.appendChild(cartItem);
+    }
 
-    updateTotalPrice();
+    updateTotalPrice(); // Оновлюємо загальну ціну після додавання товару
 }
 
-function removeFromCart(cartItem) {
+// Функція для видалення товару з корзини
+export function removeFromCart(cartItem) {
     cartItem.remove();
-    updateTotalPrice();
+    updateTotalPrice(); // Оновлюємо загальну ціну після видалення товару
 }
 
-function updateTotalPrice() {
+// Функція для оновлення загальної ціни
+export function updateTotalPrice() {
     const cartItems = document.querySelectorAll('.cart-item');
     let totalPrice = 0;
 
     cartItems.forEach(cartItem => {
         const priceElement = cartItem.querySelector('.cart-item-details p');
-        const price = parseFloat(priceElement.textContent);
+        const price = parseFloat(priceElement.textContent); // Перетворюємо ціну у число
         const quantityInput = cartItem.querySelector('input[type="number"]');
-        const quantity = parseInt(quantityInput.value);
+        const quantity = parseInt(quantityInput.value); // Отримуємо кількість товару
 
-        totalPrice += price * quantity;
+        totalPrice += price * quantity; // Додаємо вартість товару до загальної ціни
     });
 
     const totalPriceElement = document.querySelector('.total-price');
-    totalPriceElement.textContent = 'Total Price: ' + totalPrice.toFixed(2);
+    totalPriceElement.textContent = 'Total Price: ' + totalPrice.toFixed(2); // Виводимо загальну ціну з двома знаками після коми
 }
 
-function checkout() {
-    const cartContainer = document.querySelector('.modal-body .container');
-    cartContainer.innerHTML = '';
-
-    const orderForm = document.createElement('form');
-    orderForm.classList.add('order-form');
+// Додаємо форму для вводу інформації покупця
+function addCustomerInfoForm() {
+    const customerInfoForm = document.createElement('form');
+    customerInfoForm.id = 'customer-info-form';
 
     const nameLabel = document.createElement('label');
-    nameLabel.textContent = 'Name:';
-    orderForm.appendChild(nameLabel);
-
+    nameLabel.for = 'name';
+    nameLabel.textContent = 'Ім\'я:';
     const nameInput = document.createElement('input');
     nameInput.type = 'text';
-    nameInput.name = 'name';
-    orderForm.appendChild(nameInput);
+    nameInput.id = 'name';
+    nameLabel.appendChild(nameInput);
+    customerInfoForm.appendChild(nameLabel);
 
-    orderForm.appendChild(document.createElement('br'));
-
-    const surnameLabel = document.createElement('label');
-    surnameLabel.textContent = 'Surname:';
-    orderForm.appendChild(surnameLabel);
-
-    const surnameInput = document.createElement('input');
-    surnameInput.type = 'text';
-    surnameInput.name = 'surname';
-    orderForm.appendChild(surnameInput);
-
-    orderForm.appendChild(document.createElement('br'));
+    const lastNameLabel = document.createElement('label');
+    lastNameLabel.for = 'last-name';
+    lastNameLabel.textContent = 'Прізвище:';
+    const lastNameInput = document.createElement('input');
+    lastNameInput.type = 'text';
+    lastNameInput.id = 'last-name';
+    lastNameLabel.appendChild(lastNameInput);
+    customerInfoForm.appendChild(lastNameLabel);
 
     const phoneLabel = document.createElement('label');
-    phoneLabel.textContent = 'Phone:';
-    orderForm.appendChild(phoneLabel);
-
+    phoneLabel.for = 'phone';
+    phoneLabel.textContent = 'Номер телефону:';
     const phoneInput = document.createElement('input');
     phoneInput.type = 'tel';
-    phoneInput.name = 'phone';
-    orderForm.appendChild(phoneInput);
-
-    orderForm.appendChild(document.createElement('br'));
+    phoneInput.id = 'phone';
+    phoneLabel.appendChild(phoneInput);
+    customerInfoForm.appendChild(phoneLabel);
 
     const submitButton = document.createElement('button');
     submitButton.type = 'submit';
-    submitButton.textContent = 'Place Order';
-    orderForm.appendChild(submitButton);
+    submitButton.textContent = 'Замовити';
+    customerInfoForm.appendChild(submitButton);
 
-    cartContainer.appendChild(orderForm);
+    const cartContainer = document.querySelector('.modal-body .container');
+    cartContainer.appendChild(customerInfoForm);
 }
 
-document.querySelector('.modal-footer .btn-primary').addEventListener('click', checkout);
+addCustomerInfoForm(); // Викликаємо функцію для додавання форми
