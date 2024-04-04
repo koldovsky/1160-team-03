@@ -33,6 +33,8 @@
 .contacts__info-address-text,
 .contacts__info-hours-text {
   color: var(--text-color);
+  display: table-column !important; /* зміна на блоковий відображення */
+  margin-bottom: 10px; /* додатковий відступ між елементами */
 }
 
 .contacts__info-contacts a {

@@ -1,0 +1,128 @@
+.exceptional-title {
+    text-align: left;
+    font-size: 34px;
+    font-family: "Poppins", sans-serif;
+    color:var( --header-top-address-text-color);
+    font-weight: 700;
+    line-height: 40.8px;
+}
+.exceptional-list{
+   color:var( --header-top-address-text-color);
+   font-family: "Roboto", sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 25.6px;
+   text-align: left;
+}
+.text-exceptional {
+   font-size: 18px;
+   font-family: "Roboto", sans-serif;
+   color: var(--header-nav-link-color);
+   text-align: left;
+   line-height: 27px;
+}
+.exceptional-text-for-list {
+   font-size: 16px;
+   font-weight: 400;
+   font-family:"Roboto", sans-serif;
+   color: var(--banner-description-color);
+   line-height: 25.6px;
+}
+.exceptional-taste-container {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
+  justify-content: space-around;
+}
+.exceptional-right-position {
+   padding: 60px;
+}
+li.exceptional-for-what {
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+   list-style-type: none;
+   text-align: left;
+}
+.exceptional-coffee{
+ height: 60px;
+     width: 70px;
+     position: relative;
+     border-radius: 50%;
+     background-color:var(--primary-color) ;
+     padding-right: 10px;
+     background-size: 60%; 
+     background-repeat: no-repeat; 
+     background-position: center;
+     object-fit: cover;
+ }
+ .exceptional-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+  }
+@media (max-width: 767px) {
+   .exceptional-taste-container {
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+   }
+
+   .exceptional-right-position {
+       padding: 39px;
+   }
+
+   .exceptional-taste-img {
+       width: 350px;
+       border-radius: 5px;
+       margin-left: auto;
+       margin-right: auto;
+       object-fit: cover;
+   }
+ .exceptional-coffee{
+     height: 55px;
+     width: 70px;
+ }
+}
+
+@media (min-width: 768px) {
+   .exceptional-taste-img {
+       border-radius: 5px;
+       width: 400px;
+       object-fit: cover;
+   }
+
+   .exceptional-right-position {
+       border-radius: 8px;
+       border-width: 1px;
+       border-style: solid;
+   }
+ .exceptional-coffee{
+   height: 61px;
+   width: 90px;
+ }
+}
+@media (min-width: 992px){
+   .exceptional-taste-container {
+       display: flex;
+       flex-direction: row;
+       gap: 20px;
+   }
+
+   .exceptional-right-position {
+       padding: 60px;
+   }
+
+   .exceptional-taste-img {
+       width: 800px;;
+       object-fit: cover;
+   }
+ .exceptional-coffee{
+   height: 70px;
+   width: 100px;
+ }
+}
