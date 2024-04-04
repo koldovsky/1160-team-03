@@ -1,4 +1,3 @@
-/* Загальний стиль */
 .coffee-machines {
   text-align: center;
   margin: 15px;
@@ -21,53 +20,83 @@
   font-weight: 300;
 }
 
-/* Стилі для зображення та контейнера товарів */
 .coffee-machines__img {
-  width: 100%; /* Змінивши ширину на 100%, забезпечимо адаптивний розмір для зображення */
+  width: 100%; /* Adjust according to design */
+  max-width: 300px; /* Adjust according to design */
 }
 
 .coffee-machines__items-container {
   display: flex;
+  flex-wrap: wrap; /* Ensures items wrap on smaller screens */
   justify-content: center;
-  flex-wrap: wrap; /* Додаємо flex-wrap для обрізання елементів на малих екранах */
 }
 
-/* Стилі для кожного товару */
 .coffee-machine__item {
-  width: 100%; /* Змінивши ширину на 100%, забезпечимо повний розмір товару на малих екранах */
+  width: 90%; /* Adjust according to design */
+  max-width: 300px; /* Adjust according to design */
   font-family: var(--font-family-secondary);
-  font-size: 24px;
-  margin: 20px;
+  font-size: 18px;
+  margin: 20px auto; /* Centering items */
 }
 
-/* Стилі для кнопки додавання в кошик */
-.coffee-machine__item .coffee-machine__button {
+.coffee-machine__item a {
+  text-decoration: none;
+}
+
+.coffee-machine__item h6 {
+  color: var(--secondary-color);
+  font-size: 16px; /* Adjust according to design */
+  font-weight: 400;
+  margin-top: 16px; /* Adjust according to design */
+}
+
+.coffee-machine__item p {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.coffee-machine__button {
   background-color: var(--primary-color);
   border: none;
   color: var(--hero-text-color);
-  padding: 16px 32px;
+  padding: 12px 24px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 14px; /* Adjust according to design */
+  margin: 8px 0; /* Adjust according to design */
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 2px;
 }
 
-.coffee-machine__item .coffee-machine__button:hover {  
+.coffee-machines__button:hover {  
   background-color: var(--secondary-color);
 }    
 
-/* Збільшуємо розмір заголовку при ширині екрана 768px і більше */
-@media (min-width: 768px){
-  .coffee-machines__first-titel{
-      font-size: 40px;
+@media (min-width: 768px) {
+  /* Styles for tablets and larger screens */
+  .coffee-machines__first-titel {
+    font-size: 40px;
+  }
+  
+  .coffee-machines__img {
+    width: 248px; /* Adjust according to design */
   }
 
-  /* Змінюємо розмір елементів в контейнері при великих екранах */
   .coffee-machine__item {
-      width: calc(33.33% - 40px); /* Змінюємо ширину товару на 33.33% при великих екранах */
+    width: 250px;
+    font-size: 24px;
+    margin: 20px;
+  }
+
+  .coffee-machine__item h6 {
+    font-size: 20px;
+    margin-top: 24px;
+  }
+
+  .coffee-machine__button {
+    font-size: 16px;
+    margin: 4px 2px;
   }
 }
