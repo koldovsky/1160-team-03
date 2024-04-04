@@ -1,12 +1,19 @@
-// basket.js
-export function addToCart(machine) {
-    const existingCartItem = document.querySelector('.cart-item h6');
 
-    if (existingCartItem && existingCartItem.textContent === machine.title) {
-        const quantityInput = existingCartItem.parentElement.querySelector('input[type="number"]');
-        const currentQuantity = parseInt(quantityInput.value);
-        quantityInput.value = currentQuantity + 1;
-    } else {
+export function addToCart(machine) {
+    const cartItemTitles = document.querySelectorAll('.cart-item h6');
+    let itemExists = false;
+
+    cartItemTitles.forEach(cartItemTitle => {
+        if (cartItemTitle.textContent === machine.title) {
+            const quantityInput = cartItemTitle.parentElement.parentElement.querySelector('input[type="number"]');
+            const currentQuantity = parseInt(quantityInput.value);
+            quantityInput.value = currentQuantity + 1;
+            itemExists = true;
+        }
+    });
+
+    if (!itemExists) {
+        // Додати новий товар у кошик
         const cartItem = document.createElement('div');
         cartItem.classList.add('cart-item');
 
