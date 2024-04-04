@@ -40,6 +40,7 @@ export function addToCart(machine) {
 // Функція для видалення товару з корзини
 function removeFromCart(cartItem) {
     cartItem.remove();
+    updateTotalPrice(); // Оновлюємо загальну ціну після видалення товару
 }
 
 // Функція для оновлення загальної ціни
@@ -60,6 +61,7 @@ function updateTotalPrice() {
     totalPriceElement.textContent = 'Total Price: ' + totalPrice.toFixed(2); // Виводимо загальну ціну з двома знаками після коми
 }
 
+// Функція для оформлення замовлення
 function checkout() {
     const cartContainer = document.querySelector('.modal-body .container');
     cartContainer.innerHTML = ''; // Очищення корзини
@@ -108,3 +110,6 @@ function checkout() {
 
     cartContainer.appendChild(orderForm);
 }
+
+// Додавання обробника події для кнопки "Оформити замовлення"
+document.querySelector('.modal-footer .btn-primary').addEventListener('click', checkout);
